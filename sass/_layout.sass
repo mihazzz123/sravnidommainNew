@@ -1,0 +1,440 @@
+.lay
+  &-box
+    &_fs
+      padding-top: 42px
+      padding-right: 34px
+      padding-left: 34px
+      &_2
+        margin-top: 30px
+        padding-top: 31px
+        padding-left: 35px
+        padding-bottom: 19px
+        padding-right: 33px
+      &_3
+        margin-top: 22px
+        padding-top: 24px
+        padding-left: 34px
+        padding-bottom: 11px
+        margin-bottom: 8px
+      &_4 
+        padding-bottom: 35px
+        & .lay-checkbox__wrap
+          margin-left: 10px
+          margin-right: 10px
+    &_sec
+      &_1
+        min-height: 106px
+        padding-top: 27px
+        padding-bottom: 27px
+      &_2
+        padding-top: 19px
+        padding-left: 26px
+        padding-right: 34px
+        padding-bottom: 21px
+      &_3
+        padding-top: 31px
+        padding-right: 34px
+        padding-bottom: 48px
+        padding-left: 34px
+  &-filter-wrap .filter-item
+    margin-bottom: 18px
+  &-search
+    &-search
+      &__wrap
+        margin-right: 31px
+        min-width: 263.5px
+        & input
+          opacity: 1
+          &::placeholder 
+            font-family: FuturaPTMedium
+            color: #2C3942
+  &-filter
+    &-wrap
+      padding-bottom: 36px
+    &__select 
+      width: 163px
+      margin-left: 0 !important
+      margin-right: 16px
+  &-row_1
+    margin-bottom: 32px
+  &-title
+    font-family: FuturaPTMedium
+    font-size: 20px
+    text-transform: uppercase
+    color: #2C3942
+    &-chevron
+      margin-bottom: 6px
+    &-small
+      font-size: 20px
+      // line-height: 34px
+      font-family: FuturaPTMedium
+      color: #2C3942
+  &-checkbox
+    &__wrap
+      margin-left: 37px
+    &__input-hidden
+      width: 0.0001px
+      height: 0.0001px
+      position: absolute
+      left: 99999px
+      z-index: -999
+      &:checked
+        & + .lay-checkbox__label:before
+          background-image: url(../images/check.png)
+          border: 1px solid #6CB7B2
+    &__label
+      // font-family: FuturaPTMedium
+      font-size: 14px
+      color: #2C3942
+      cursor: pointer
+      &:before
+        content: ""
+        background: #FFFFFF
+        border: 1px solid rgba(44, 57, 66, 0.3)
+        box-sizing: border-box
+        border-radius: 2px
+        width: 16px
+        height: 16px
+        margin-right: 13px
+        background-position: 2px 3px
+        background-repeat: no-repeat
+  &-sort
+    &__wrap
+      margin-left: -4px
+      margin-right: -4px
+    &__item
+      line-height: 29px
+      padding-left: 7px
+      padding-right: 6px
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      color: #2C3942
+      border-radius: 20px
+      background: #ffffff
+      cursor: pointer
+      transition: 0.3s
+      white-space: nowrap
+      margin: 0px 4px 4px 4px
+      text-decoration: underline
+      &:hover 
+        box-shadow: 2px 3px 20px rgba(107, 183, 178, 0.6)
+      &_active
+        text-decoration: none
+        background: #D2E9E8
+  &-row_2
+    position: relative
+    margin-left: -10px
+    margin-right: -10px
+  &-set 
+    &__btn
+      margin-top: 19px
+      margin-right: 10px
+    &-item  
+      &__wrap
+        margin-bottom: 7px
+        background: #FFFFFF
+        border-radius: 5px
+        padding: 8px 10px 9px 
+        position: relative
+        &:hover
+          & .lay-set-item__popup
+            z-index: 100
+            opacity: 1
+      &__popup
+        opacity: 0
+        display: flex
+        background: #FFFFFF
+        border-radius: 5px
+        padding: 8px 10px 9px 
+        box-shadow: 5px 5px 20px rgba(117, 141, 139, 0.5)
+        position: absolute
+        left: 0
+        top: 0
+        background: #FFFFFF
+        width: calc(100% + 89px)
+        height: 100%
+        transition: 0.3s
+        z-index: -100
+        &-last
+          left: -89px
+      &__name 
+        font-family: FuturaPTMedium
+        font-size: 14px
+        line-height: 17px
+        color: #2C3942
+        line-height: 30px
+        margin-right: 18px
+        margin-left: 12px
+      &__space
+        height: 2px
+        width: 13px
+        background: #2C3942   
+        margin: 14px 6px  
+      &__text
+        font-size: 14px
+        line-height: 17px
+        color: #2C3942
+        line-height: 30px
+        margin-left: 7px
+        margin-right: 9px
+      &__btn
+        width: 89px
+        padding: 0
+      &__input
+        width: 47px
+        height: 30px
+        background: #F5F5F5
+        border: 1px solid rgba(44, 57, 66, 0.1)
+        box-sizing: border-box
+        box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.25)
+        border-radius: 6px
+        font-size: 14px
+        line-height: 120%
+        text-align: center
+        color: #2C3942
+        text-align: center
+        padding: 7px
+        -moz-appearance: textfield
+        &::-webkit-outer-spin-button, &::-webkit-inner-spin-button 
+          -webkit-appearance: none
+          margin: 0
+        &:hover, &:focus
+          -moz-appearance: number-input
+  &-main-btn
+    &__sec
+      margin-left: 16px
+  &-row
+    &_3
+      margin-top: 18px
+      margin-bottom: 28px
+    &_5
+  &-sort 
+    &-col
+      margin-bottom: 33px
+      width: 130px
+      margin-right: 20px
+      &:last-child
+        width: auto
+      &__title
+        font-family: FuturaPTMedium
+        margin-bottom: 11px
+        font-size: 14px
+        color: #2C3942
+      & .lay-checkbox__wrap
+        margin-bottom: 10px
+        & span
+          font-size: 12px
+          color: #2C3942
+          white-space: nowrap
+  &-legend
+    &__name
+      font-size: 14px
+      color: #2C3942
+      opacity: 0.5
+      line-height: 14px
+      margin-bottom: 4px
+    &__color
+      width: 30px
+      height: 4px
+      margin-right: 11px
+      margin-left: 47px
+      &_1
+        background: #CBE6FA
+      &_2
+        background: #0094FE
+      &_3
+        background: #FFD8E0
+      &_4
+        background: #FF6688
+  &-graph
+    &__wrap
+      margin-top: 23px
+      margin-left: 18px
+    &__title
+      font-size: 13px
+      line-height: 13px
+      color: #2C3942
+      opacity: 0.5
+      &-wrap
+        transform: rotate(-90deg)
+        position: absolute
+        left: -70px
+        top: 130px
+    &__radio
+      margin-top: 5px
+      width: 76px
+      height: 26px
+      background: linear-gradient(0deg, #F6F7FB, #F6F7FB), linear-gradient(90deg, #8AD5FF 0%, #4045AC 59.37%, #320E60 100%)
+      box-shadow: inset 2px 2px 7px rgba(0, 0, 0, 0.3)
+      border-radius: 13px
+      & i
+        display: block
+        position: absolute
+        width: 8px
+        height: 8px
+        border-radius: 50%
+        top: 9px
+        cursor: pointer
+      &_left
+        left: 9px
+        background: #0094FE
+      &_center
+        display: block
+        position: absolute
+        top: 9px
+        left: calc(50% - 4.5px)
+        width: 8px
+        height: 8px
+        border-radius: 50%
+        overflow: hidden
+        &:before, &::after
+          content: ""
+          display: block
+          position: absolute
+          width: 4px
+          height: 10px
+          top: -1px
+        &:before
+          left: 0px
+          background: #0094FE
+        &:after 
+          right: 0px
+          background: #FF6688
+      &_right
+        right: 9px
+        background: #FF6688
+    &__circle
+      position: absolute
+      top: 0
+      left: calc(50% - 13px)
+      width: 26px
+      height: 26px
+      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4)
+      border-radius: 50%
+      border: 4px solid #ffffff
+      background: transparent
+      overflow: hidden
+      transition: 0.3s
+      &:before 
+        content: ""
+        position: absolute
+        display: block
+        height: 26px
+        width: 38px
+        border-radius: 13px 0 0 13px
+        background: #0094FE
+        top: -4px
+        left: -28.5px
+        transition: 0.3s
+        box-shadow: inset 0px 0px 11px 0px rgba(0, 0, 0, 0.4)
+      &:after 
+        content: ""
+        position: absolute
+        display: block
+        height: 26px
+        width: 38px
+        border-radius: 0 13px 13px 0
+        background: #FF6688
+        top: -4px
+        box-shadow: inset 0px 0px 11px 0px rgba(0, 0, 0, 0.4)
+        right: -28.5px
+        transition: 0.3s
+      &_left
+        left: 0
+        &:before 
+          left: -18.5px
+        &:after 
+          right: -38.5px
+      &_right
+        left: 50px 
+        &:before 
+          left: -38.5px
+        &:after 
+          right: -18.5px
+  &-table
+    &_1 
+      border-bottom: none !important
+      & .dev-table-text_2
+        font-family: FuturaPTBook
+      & thead th, & thead td
+        background-position: 97% 8px!important
+        border-bottom: none !important
+        text-align: left
+        vertical-align: top
+        background-size: 0px !important
+      & thead tr
+        &:first-child
+          & th
+            &:nth-child(2), &:nth-child(3), &:nth-child(6), &:nth-child(8), &:nth-child(10), &:nth-child(12)
+              border-left: 1px solid #F1F2F2
+              padding-left: 10px !important
+            &:nth-child(4)
+              padding-left: 10px !important
+              border-right: 1px solid #F1F2F2
+        &:nth-child(2)
+          & th
+            &:nth-child(1) 
+              padding-left: 8px !important
+            &:nth-child(2)
+              padding-left: 8px !important
+        &:nth-child(3)
+          & td 
+            padding-bottom: 9px !important
+          & .dev-table-text_2
+            line-height: 20px !important
+      & thead .sorting::after 
+        content: url(../images/arrow_down.png) !important
+      & thead .sorting_asc::after
+        content: url(../images/arrow_top.png) !important
+      & thead .sorting_desc::after
+        content: url(../images/arrow_down.png) !important
+      & tr 
+        & td, & th
+          font-size: 14px
+          padding-right: 0 !important
+        & td
+          &:nth-child(2), &:nth-child(3), &:nth-child(8), &:nth-child(10), &:nth-child(12)
+            border-left: 1px solid #F1F2F2
+            padding-left: 10px !important
+          &:nth-child(4)
+            border-right: 1px solid #F1F2F2
+          &:nth-child(5), &:nth-child(6), &:nth-child(7)
+            text-align: center !important
+            padding-left: 8px !important
+      & tbody tr
+        &:nth-child(even)
+          & td
+            background: #fff !important
+        &:nth-child(odd)
+          & td
+            background: #F6F7FB
+        &:hover 
+          & td 
+            background: #D2E9E8 !important
+    &__wrap
+      margin-top: 30px
+      & .dataTables_wrapper
+        margin-top: 0px
+  &-box_fs_5
+    margin-top: 22px
+    padding-top: 14px
+    padding-left: 33px
+    padding-bottom: 27px
+    padding-right: 33px
+    height: 431px
+    overflow: hidden
+    position: relative
+    &:before 
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 11px
+      height: 100%
+      background: linear-gradient(180deg, #7674F8 0%, #FA6EAE 100%)
+      // border-radius: 10px 0px 0px 0px
+
+#layBar_1
+  width: 100%
+  height: 330px

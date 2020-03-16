@@ -1,0 +1,1589 @@
+$color-1: #ffffff
+$color-2: #6bb7b2
+
+.border-bottom  
+  border-bottom: 1px solid #F1F2F2
+
+.bg-1 
+  background: $color-1
+.bg-2 
+  background: $color-2
+.block
+  display: block
+.flex 
+  display: flex
+.flex-wrap
+  flex-wrap: wrap
+.flex-col 
+  display: flex
+  flex-direction: column
+.space-between
+  justify-content: space-between
+.justify-center
+  justify-content: center
+.space-around
+  justify-content: space-around
+.justify-end
+  justify-content: flex-end
+.flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+.align-center
+  align-items: center
+.align-end
+  align-items: flex-end
+.text-center
+  text-align: center !important
+.relative
+  position: relative
+.w-100
+  width: 100%
+.mt-0
+  margin-top: 0 !important
+.ml-0
+  margin-left: 0 !important
+.mr-0
+  margin-right: 0 !important
+.pl-0
+  padding-left: 0 !important
+.pr-0
+  padding-right: 0 !important
+
+.link
+  cursor: pointer
+  color: #6CB7B2
+  font-size: 14px
+  line-height: 17px
+  padding-bottom: 2px
+  border-bottom: 1px dashed rgba(108, 183, 178, 0.5)
+
+
+.dropdown 
+  display: inline-block
+  background-color: transparent
+  transition: all .4s ease
+  position: relative
+  font-size: 14px
+  color: #474747
+  text-align: left
+  outline: none
+  border-bottom: 1px solid
+  border-bottom-color: rgba(0,0,0,0.12)
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+.dropdown .select 
+  cursor: pointer
+  display: block
+.dropdown .select > .fa-chevron-left
+  transform: rotate(-90deg)
+  font-size: 13px
+  color: #888
+  cursor: pointer
+  transition: all .3s ease-in-out
+  float: right
+  line-height: 20px
+.dropdown:active 
+  // background-color: transparent
+.dropdown.active:hover,
+.dropdown.active 
+  // box-shadow: 0 0 4px rgb(204, 204, 204)
+  border-radius: 15px 15px 0 0
+.dropdown.active .dropdown-menu 
+  border-radius: 0 0 15px 15px !important
+.dropdown.active .select > .fa-chevron-left
+  transform: rotate(-270deg)
+.dropdown .dropdown-menu 
+  position: absolute
+  width: 100%
+  left: 0
+  top: calc(100% - 2px)
+  margin-top: 1px
+  overflow: hidden
+  display: none
+  max-height: 144px
+  overflow-y: auto
+  z-index: 9
+  transition: border-radius 0.1s ease-in-out
+.dropdown .dropdown-menu li 
+  padding: 8px 18px
+  background-color: #f6f7fb
+  transition: all .2s ease-in-out
+  cursor: pointer
+.dropdown .dropdown-menu 
+  padding: 0
+  list-style: none
+  border-radius: 15px 
+  & li:last-child
+    padding-bottom: 15px
+.dropdown.active .dropdown-menu 
+  border-radius: 0 0 15px 15px 
+
+
+.container
+  background-color: #f6f7fb
+  margin-left: 44px
+  padding-top: 3px
+.pb-50
+  padding-bottom: 50px
+.box
+  background: #e7ebee
+  box-shadow: 2px 3px 73px 22px rgba(117, 141, 139, 0.15)
+.box_fs 
+  border-radius: 10px 10px 0 0 
+  background-color: #ffffff
+  padding-top: 23px
+  padding-left: 32px
+  padding-right: 32px
+  margin-bottom: 10px
+  margin-top: 41px
+  transition: 0.3s
+  &_rounded
+    border-radius: 10px
+.box_sec
+  border-radius: 0 0 10px 10px 
+  background-color: #ffffff
+  padding-left: 32px
+  padding-right: 32px
+  transition: 0.3s
+  overflow: hidden  
+  &_show
+    &_1
+      // height: 278px
+      height: 268px
+    &_2
+      height: 268px
+    &_3
+      height: 268px
+      // height: 271px
+  &_hidden
+    border-radius: 10px
+    height: 0
+.box_single
+  border-radius: 10px 
+.title
+  height: 20px
+  line-height: 20px
+  color: #2c3a43
+  font-family: FuturaPTMedium
+  font-size: 20px
+  font-weight: 400
+  text-transform: uppercase
+  letter-spacing: 0.4px
+  &-fs 
+    // padding-right: 100px
+  &__wrap
+    margin-right: auto
+    // padding-right: 60px
+    & svg 
+      display: block
+      width: 26px
+      margin-right: 17px
+.main-btn
+  height: 32px
+  border: none
+  padding: 0px 19px
+  border-radius: 15px
+  background-color: #6bb7b2
+  color: #ffffff
+  font-size: 14px
+  font-weight: 400
+  line-height: 32px
+  letter-spacing: -0.06px
+  transition: 0.3s
+  white-space: nowrap
+  &:hover 
+    box-shadow: 2px 3px 20px rgba(107, 183, 178, 0.6)
+  &__sec
+    font-family: FuturaPTMedium
+    height: 32px
+    border-radius: 15px
+    border: 1px solid rgba(38, 48, 56, 0.1)
+    background-color: #ffffff
+    color: #2c3942
+    font-size: 14px
+    font-weight: 400
+    line-height: 30px
+    letter-spacing: -0.06px
+    &:last-child
+      margin-left: 12px
+    &_active
+      color: #6bb7b2
+      border: 1px solid #6bb7b2
+.btn-more
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  width: 125px
+  height: 46px
+  // padding: 0px 19px
+  background-color: #6bb7b2
+  color: #ffffff
+  font-size: 14px
+  font-weight: 400
+  line-height: 32px
+  letter-spacing: -0.06px
+  transition: 0.3s
+  // height: 52px
+  position: absolute
+  top: calc(100% - 18px)
+  left: calc(50% - 62.5px)
+  border-radius: 30px
+  border: 7px solid #e7ebee
+  font-family: FuturaPTMedium
+  & i
+    display: inline-block
+    margin-left: 5px
+    // width: 11px
+    // height: 7px
+    color: #ffffff
+    font-size: 11px
+    transition: 0.3s
+    // transform-origin: top center
+  &:hover
+    background-color: lighten(#6bb7b2, 10%)
+  &_active i
+    transform: rotate(180deg)
+    
+.search
+  &-wrap
+    padding-bottom: 35px
+  &-search
+    &__wrap 
+      position: relative
+      display: flex
+      align-items: center
+      margin-right: 32px
+      min-width: 280px
+      & .fa-search
+        left: 0
+        position: absolute
+        color: #6bb7b2
+        font-size: 14px
+      & .fa-times
+        right: 0
+        cursor: pointer
+        position: absolute
+        opacity: 0.3
+        color: #2c3942
+        font-size: 14px
+    &__select
+      display: flex
+      align-items: center
+      padding-right: 10px
+      padding-left: 18px
+      height: 32px
+      border: none
+      width: 161px
+      border-radius: 15px
+      background-color: #f6f7fb
+      color: #2c3942
+      font-size: 14px
+      font-weight: 400
+      letter-spacing: -0.06px
+      font-family: FuturaPTMedium
+      &:last-child
+        margin-left: 32px
+      & .select
+        width: 100%
+        display: flex
+        justify-content: space-between
+      &-sec 
+        background: $color-2
+        color: #ffffff
+        & .fa-chevron-left
+          color: #ffffff !important
+          opacity: 0.5
+        & .dropdown-menu li
+          background: darken($color-2, 5%) !important
+  &__input
+    width: 100%
+    opacity: 0.5
+    color: #2c3942
+    font-family: FuturaPTMedium
+    font-size: 14px
+    font-weight: 400
+    line-height: 11px
+    letter-spacing: -0.06px
+    border: none
+    background: none
+    border-bottom: 1px solid #d1d1d1
+    padding: 8px 35px 5px 35px
+    &::placeholder
+      font-family: FuturaPTMedium
+
+.filter
+  &-check
+    background: #e7ebee
+    top: calc(100% - 18px)
+    position: absolute
+    border-radius: 50%
+    width: 46px
+    height: 46px
+    border: 10px solid #e7ebee
+    z-index: 3
+    & i 
+      text-align: center
+      line-height: 26px
+      border-radius: 50%
+      width: 26px
+      height: 26px
+      display: block
+      border: 1px solid #ffffff
+      color: #ffffff
+      font-size: 14px
+      letter-spacing: -0.04px
+  &-wrap
+    flex-wrap: wrap
+    padding-bottom: 45px
+  &-item 
+    font-family: FuturaPTMedium
+    border-radius: 15px
+    border: 1px solid rgba(38, 48, 56, 0.1)
+    background-color: #ffffff
+    padding: 8px 20px 8px 35px
+    position: relative
+    transition: 0.3s
+    margin-right: 15px
+    margin-bottom: 15px
+    cursor: pointer
+    &_active
+      border-color: #6bb7b2
+      & .filter-icon 
+        background-color: #6bb7b2
+        & i
+          opacity: 1 
+          color: #ffffff
+    &:hover 
+      box-shadow: 2px 3px 20px rgba(107, 183, 178, 0.4)
+      border-color: #ffffff 
+  &-icon
+    text-align: center  
+    border-radius: 50%
+    position: absolute
+    left: 3px
+    width: 26px
+    height: 26px
+    background-color: #f2f3f7
+    &__remove
+      left: auto
+      right: 3px
+      display: none
+    & i 
+      line-height: 26px
+      opacity: 0.3
+      color: #2c3942
+      font-size: 14px
+  &-text
+    color: #2c3942
+    font-size: 14px
+    line-height: 14px
+    letter-spacing: -0.06px
+  &-item__selected-wrap
+    flex-wrap: wrap
+  &-selected
+    align-items: center
+    padding-top: 40px
+    padding-bottom: 40px
+    background-image: linear-gradient(to right, #fef1fa 0%, #faecf9 41%, #faecf9 42%, #e4f3fc 100%)
+    position: relative
+    overflow: hidden
+    min-height: 132px
+    transition: height 0.3s
+    &:before
+      content: ""
+      position: absolute
+      left: 0
+      top: 0
+      height: 100%
+      width: 9px
+      background: $color-2
+    & .fa-chevron-down
+      opacity: 0.3
+      color: #2c3942
+      font-size: 14px
+      margin-right: 15px
+    & .filter-item_active
+      // border-color: #fff
+      border: 1px solid rgba(38, 48, 56, 0.1)
+    &__title 
+      white-space: nowrap
+      color: #2c3a43
+      font-size: 20px
+      letter-spacing: 0.4px
+      margin-right: 10px
+      font-family: FuturaPTMedium
+    & .filter-item
+      margin-left: 10px
+      margin-right: 10px
+      margin-top: 10px
+      margin-bottom: 10px
+      padding: 8px 40px 8px 15px
+    & .filter-icon
+      display: none
+    & .filter-icon__remove
+      display: block
+      background-color: #f2f3f7
+      & i
+        color: #2c3942 
+        opacity: 0.3
+
+.drp-calendar
+  width: 50% !important
+.clndr thead tr:first-child th:first-child:hover, .clndr thead tr:first-child th:last-child:hover
+  border: none !important
+.daterangepicker .drp-calendar.left .calendar-table
+  padding-right: 15px
+.table-condensed
+  & .off.ends
+    opacity: 0.5 !important
+    color: #2c3942
+    font-size: 12px
+  & td, & th
+    width: 28px !important 
+    height: 25px !important
+    line-height: 23px !important
+    min-width: 26px !important
+  & td
+    z-index: 99
+    color: #2c3942 !important
+    font-family: FuturaPTMedium
+    font-size: 12px !important
+    font-weight: 400
+    position: relative
+    &::after
+      position: absolute
+      content: ""
+      width: 100%
+      height: 100%
+      left: 2px
+      top: 1px
+      z-index: -1
+    &::before
+      content: ""
+      position: absolute
+      left: 0px
+      top: 2px
+      width: 100%
+      z-index: -2
+      height: 21px
+  & *
+    font-family: FuturaPTBook
+    font-weight: 400
+    letter-spacing: -0.06px
+  &.in-range
+
+.daterangepicker thead
+  & tr 
+    &:first-child 
+      & th 
+        border: none !important
+        color: #2c3942
+        font-family: FuturaPTMedium
+        font-size: 14px
+        font-weight: 400
+        letter-spacing: -0.06px
+      & .prev.available, & .next.available
+        width: 28px
+        height: 28px
+        border: none !important
+        background-color: #ffffff
+        font-size: 13px
+        color: rgb(107, 183, 178) !important
+        border-radius: 0px !important
+        padding: 0px !important
+        position: relative
+        &::after
+          position: absolute
+          content: ""
+          width: 26px
+          height: 26px
+          border: 1px solid rgba(38, 48, 56, 0.1)
+          top: 1px
+          left: 0px
+        &:hover 
+          background-color: rgba(107, 183, 178, 0.1)
+          color: #2c3942 !important
+        & span 
+          border-color: rgb(107, 183, 178) !important
+      & .next.available::after
+        left: auto
+        right: 2px
+        
+    &:last-child 
+      & th 
+        color: #2c3942
+        font-family: FuturaPTMedium
+        font-size: 10px
+        font-weight: 400
+.daterangepicker td.active.start-date.end-date
+  border-radius: 5px !important
+.daterangepicker td.in-range
+  background-color: transparent !important
+  color: #fff !important
+  &::before
+    /* Style for "Rounded Re" */
+    background-color: #6cb4af
+.daterangepicker td.active.start-date
+  border-radius: 10px 0 0 10px !important
+  background-color: transparent !important
+  /* Style for "Ellipse 58" */
+  position: relative !important
+  color: #2c3942 !important
+  &::after
+    width: 23px
+    height: 23px
+    border: 1px solid #6cb5b0
+    background-color: #ffffff
+    border-radius: 50% 
+.daterangepicker td.active.end-date
+  border-radius: 0 10px 10px 0 !important
+  background-color: transparent !important
+  padding: 0 !important
+  color: #2c3942 !important
+  &::after
+    width: 23px
+    height: 23px
+    border: 1px solid #6cb5b0
+    background-color: #ffffff
+    border-radius: 50% 
+.active.start-date
+  &::before
+    background-color: #6cb4af
+    left: 50%
+    width: 50%
+.active.end-date
+  &::before
+    width: 50%
+.active.start-date.active.end-date
+  &::before
+    content: none
+.table-condensed
+  & tbody tr 
+    & td
+      border-right: 1px solid rgba(45, 58, 67, 0.1) !important
+      &:first-child
+        &::before
+          border-radius: 10px 0px 0px 10px
+      &:last-child
+        border-right: none !important
+        &::before
+          border-radius: 0px 10px 10px 0px
+.clndr 
+  padding-top: 33px
+  // padding-bottom: 33px
+  &_disable
+    opacity: 0
+  &__wrap
+  &-items
+    padding: 0px 10px
+    border-radius: 15px
+    background-color: #f6f7fb
+  &-item
+    white-space: nowrap
+    cursor: pointer
+    height: 32px
+    line-height: 32px
+    // padding: 0px 20px
+    width: 90px
+    text-align: center
+    color: #2c3942
+    font-family: FuturaPTMedium
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: -0.06px
+    transition: 0.3s
+    border-radius: 15px
+    &_active
+      color: #ffffff
+      box-shadow: 2px 3px 20px rgba(107, 183, 178, 0.5), 0px 3px 0px #5c7b79
+      background-color: #6bb7b2
+      position: relative
+    &__adv
+      padding: 5px 20px
+      font-size: 40px
+      line-height: 4px
+      height: 4px
+  &-result
+    &__wrap
+      margin-left: 20px
+      margin-right: 20px
+    &__space
+      padding-left: 15px
+      padding-right: 15px
+      color: #2c3942
+      font-size: 14px
+      font-weight: 400
+      line-height: 32px
+      letter-spacing: -0.06px
+  &__result
+    line-height: 32px
+    text-align: center
+    width: 91px
+    height: 32px
+    border-radius: 15px
+    background-color: #f6f7fb
+    color: #2c3942
+    font-family: FuturaPTMedium
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: -0.06px
+    &-text
+      display: block
+      line-height: 32px
+      // text-align: center
+      color: #2c3942
+      font-size: 14px
+      font-family: FuturaPTMedium
+      font-weight: 400
+      letter-spacing: -0.06px
+      // margin-right: 43px
+      margin-right: 20px
+  &-popup
+    position: absolute
+    right: 0
+    top: 0
+    width: auto
+    width: 508px
+    // width: 370px
+    border-radius: 10px
+    background-color: #ffffff
+    overflow: hidden
+    height: 0
+    padding: 0px 33px
+    z-index: 99
+
+    // height: 540px
+    // height: 360px
+    &_active
+      box-shadow: 2px 3px 73px 22px rgba(117, 141, 139, 0.15)
+      // height: 370px
+      box-shadow: 2px 3px 73px 22px rgba(117, 141, 139, 0.15)
+    &__title
+      padding-top: 23px
+    &__close
+      display: block
+      margin-left: auto
+      opacity: 0.3
+      color: #2c3942
+      font-size: 14px
+      line-height: 32px
+      letter-spacing: -0.04px
+      cursor: pointer
+
+      position: absolute
+      right: 33px
+      top: 22px
+.openClndr
+  cursor: pointer
+
+  
+.daterangepicker
+  margin-top: 0 !important
+  display: block !important
+  font-family: FuturaPTBook !important
+  font-size: 12px !important
+  font-weight: 400 !important
+  letter-spacing: -0.06px !important
+  border: none
+  // position: static
+.daterangepicker_disable
+  display: none !important
+.drp-calendar
+  padding: 0 !important
+.daterangepicker.openscenter:before
+  content: none !important
+.drp-buttons
+  display: none !important
+
+.daterangepicker 
+  width: 442px !important
+  min-width: 442px !important
+
+.date
+  &-set 
+    opacity: 0.5
+    color: #2c3942
+    font-size: 14px
+    font-weight: 400
+    line-height: 13px
+    letter-spacing: -0.06px
+    // margin: 0px 20px
+    width: 90px
+    text-align: center
+    white-space: nowrap
+    &__wrap
+      justify-content: center
+      max-width: 270px
+      width: 100%
+      padding-top: 12px
+      padding-bottom: 9px
+      // padding-left: 15px
+  &-btns
+    display: flex
+    width: 90px
+    justify-content: center
+  &-btn 
+    width: 20px
+    height: 32px
+    background-color: #ffffff
+    background-size: 100% 100%
+    background-position: center center
+    background-repeat: no-repeat
+    transition: 0.3s
+    text-align: center 
+    cursor: pointer
+    z-index: 99
+    &__wrap
+      max-width: 270px
+      justify-content: center
+    &-prev
+      background-image: url(../images/prev.png)
+      &:hover
+        background-image: url(../images/prev_hover.png)
+    &-next
+      background-image: url(../images/next.png)
+      &:hover
+        background-image: url(../images/next_hover.png)
+    & i
+      line-height: 32px
+      opacity: 0.3
+      color: #2c3942
+      font-size: 13px
+      letter-spacing: -0.04px
+
+.dataTables_length
+  display: none !important
+.dataTables_wrapper
+  margin-top: -16px
+table.dataTable thead .sorting_asc
+
+.table 
+  margin-top: -17px
+  &-wrap_2
+    margin-top: 10px
+  & tr 
+    transition: 0.3s
+  & tr td:first-child
+    width: 135px !important
+  & tr td:nth-child(2)
+    max-width: 165px !important
+    width: 165px !important
+  & td 
+    box-sizing: border-box !important
+    padding-left: 8px !important
+    padding-right: 8px !important
+    &:nth-child(3)
+      padding-left: 20px !important
+  & thead 
+    vertical-align: top !important
+    & td 
+      background: none !important
+      // border-top: 2px solid #f1f1f2        
+      padding-top: 35px !important
+      padding-bottom: 25px !important
+      border-bottom: none !important
+  & td:nth-child(2)
+    border-right: 2px solid #f1f1f2       
+  & tbody tr:last-child
+    // background: none !important
+  & tfoot td 
+    border-top: none !important
+    background: none !important
+    padding-bottom: 50px !important
+  & tbody tr:nth-child(odd)
+    & td:nth-child(3), & td:nth-child(4), & td:nth-child(5), & td:nth-child(6), & td:nth-child(7), & td:nth-child(8), & td:nth-child(9), & td:nth-child(10)
+      background-color: #f6f7fb
+  & tbody tr:hover 
+    background-color: #d2e9e8
+  &__button
+    display: inline-block
+    line-height: 30px
+    height: 32px
+    padding: 0px 15px !important
+    border-radius: 15px
+    font-family: FuturaPTMedium
+    border: 1px solid rgba(38, 48, 56, 0.1)
+    background-color: #ffffff
+    color: #2c3942
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: -0.06px
+    transition: all 0.3s
+    &:first-child
+      margin-right: 10px
+    &:hover 
+      box-shadow: 2px 3px 20px rgba(107, 183, 178, 0.4)
+    &_active
+      color: #6bb7b2
+      border: 1px solid #6bb7b2
+      background-color: #ffffff
+  &-text 
+    &__fs
+      white-space: nowrap
+      color: #2c3a43
+      font-family: FuturaPTMedium !important
+      font-size: 14px
+      font-weight: 400
+      letter-spacing: 0.28px
+    &__sec
+      opacity: 0.5
+      color: #2c3a43
+      font-family: FuturaPTMedium !important
+      font-size: 14px
+      font-weight: 400
+    &__th 
+      display: block
+      color: #000000
+      font-family: FuturaPTBook !important
+      font-size: 14px 
+      font-weight: 400
+  &-progress
+    height: 19px
+    max-width: 75px
+    width: 100%
+    margin-right: 5px
+    position: relative
+    &_sec
+      overflow: hidden
+      background-image: linear-gradient(to right, #f1b6b8 0%, #f5d5b6 32%, #f6e7b6 47%, #b7dbd7 100%)
+      border-radius: 9px
+    &__bar 
+      position: absolute
+      top: 0
+      border-radius: 9px 
+      &-fs
+        min-width: 16px
+        padding-right: 5px
+        left: 0
+        width: 0%
+        height: 100%
+        border-radius: 10px
+        background-image: linear-gradient(to right, #fef1fa 0%, #faecf9 41%, #faecf9 42%, #e4f3fc 100%)
+      &-sec 
+        right: 0
+        width: 80%
+        height: 100%
+        border-radius: 0px
+        background-color: #dbdee7
+    &__show 
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      border: 1px solid #2d3a4333
+      text-align: center
+      cursor: pointer
+      // transform: rotate(180deg)
+      transition: 0.3s
+      &:hover 
+        box-shadow: 2px 3px 20px rgba(107, 183, 178, 0.4)
+      & i 
+        color: #6bb7b2
+        font-size: 10px
+        line-height: 18px
+        letter-spacing: -0.03px
+    &__text
+      &-fs 
+        line-height: 19px
+        display: block
+        width: 100%
+        text-align: right
+        opacity: 0.8
+        color: #263038
+        font-family: FuturaPTMedium !important
+        font-size: 14px
+        font-weight: 400
+        letter-spacing: -0.07px
+      &-sec
+        line-height: 19px
+        display: block
+        width: 100%
+        text-align: center
+        opacity: 0.8
+        color: #263038
+        font-family: FuturaPTMedium !important
+        font-size: 12px
+        font-weight: 400
+        letter-spacing: -0.06px
+  &-popup
+    max-height: 0
+    overflow: hidden
+    display: flex
+    position: absolute
+    padding-left: 9px
+    padding-right: 9px
+    width: 100%
+    top: 27px
+    left: 0
+    background-color: #ffffff
+    z-index: 1
+    &__wrap
+      position: relative
+    &_active
+      // height: auto
+      box-shadow: 9px 12px 22px 7px rgba(0, 0, 0, 0.15)
+      // background-color: #d2e9e8 !important
+    &__item
+      margin-top: 3.5px
+      margin-bottom: 3.5px
+      display: flex
+#table_1_wrapper
+  position: relative
+  &::before 
+    content: ""
+    display: block
+    position: absolute
+    top: 0
+    left: -33px
+    height: 2px
+    width: calc(100% + 66px)  
+    background: #f1f1f2
+#table_2
+  position: relative
+  margin-top: 0
+  & thead td
+    border-top: none
+  & thead td
+    padding-top: 24px !important
+    padding-bottom: 5px !important
+  & tfoot td
+    padding-bottom: 46px !important
+  & .table-title 
+    padding-top: 50px !important
+.title-fs
+  align-items: flex-end
+  height: 26px
+.graph
+  &-wrap
+    // padding-top: 32px
+    padding-bottom: 12px
+    width: 100%
+  &-table
+    text-align: center
+    &__wrap
+      padding-top: 50px
+      padding-bottom: 52px
+      &_4
+        padding-bottom: 40px
+    & tbody tr:nth-child(odd)
+      & td 
+        background-color: #f6f7fb
+    & td 
+      padding: 3px 5px
+    & thead td 
+      padding-bottom: 20px
+    & tr td:nth-child(1)
+      text-align: left
+      width: 211px
+  &-img
+    max-width: 100%
+  &-status
+    padding-left: 0 !important
+    padding-right: 40px
+    &__wrap
+      padding-left: 43px
+      padding-bottom: 15px
+      padding-top: 24px
+      &_1
+        padding-top: 27px
+      &_3
+        padding-top: 29px
+.status
+  &-1 .status-bar
+    background: #8deb7c
+    background-image: linear-gradient(to left, #11ddba 0%, #9df03b 100%)
+  &-2 .status-bar
+    background: #f5bd59
+    background-image: linear-gradient(to left, #f57831 0%, #f0e52f 100%)
+  &-3 .status-bar
+    background: #2983e8
+    background-image: linear-gradient(to right, #2be3eb 0%, #2774e8 100%)
+  &-4 .status-bar
+    background: #e26fa0
+    background-image: linear-gradient(to right, #96a9e6 0%, #ec3472 100%)
+
+.color-td
+  border: 1px solid #ffffff
+
+.table
+  &-bottom
+    &__popup
+      position: absolute
+      width: 160px
+      box-shadow: 2px 3px 73px 22px rgba(117, 141, 139, 0.15)
+      background-color: #ffffff
+      padding: 15px
+      border-radius: 15px 
+      bottom: 20px
+      left: calc(50% - 75px)
+      display: none
+      &::after
+        content: ""
+        border: 8px solid transparent
+        border-top: 14px solid #ffffff
+        position: absolute
+        bottom: -16px 
+        left: calc(50% - 7px)
+      &-count
+        text-align: center
+        display: flex
+        justify-content: center
+        color: #e2e6ea
+        font-family: FuturaPTBook
+        font-size: 24px
+        font-weight: 400
+        padding-top: 10px
+        letter-spacing: -0.42px
+      &-fs
+        & .table-bottom__popup-count
+          color: #6bb7b2
+      &-sec
+        & .table-bottom__popup-count 
+          color: #f6a05a
+      &-title
+        text-align: center
+        color: #2c3942
+    &__progress
+      display: flex
+  &-progress
+    display: flex
+    &__start
+      text-align: left
+      padding-left: 13px
+      width: 16%
+      height: 20px
+      background-color: #dbdee7
+      background-image: linear-gradient(to left, #90efd4 0%, #c4f6a5  100%)
+      border-radius: 15px 0 0 15px
+      line-height: 20px
+      color: #263038
+      font-family: FuturaPTMedium
+      font-size: 12px
+      font-weight: 400
+      letter-spacing: -0.06px
+    &__end
+      text-align: left
+      padding-left: 13px
+      width: 84%
+      height: 20px
+      background-color: #dbdee7
+      border-radius: 0 15px 15px 0
+      line-height: 20px
+      color: #263038
+      background-image: linear-gradient(to left, #f9c297 0%, #ebe296 100%)
+      font-family: FuturaPTMedium
+      font-size: 12px
+      font-weight: 400
+      letter-spacing: -0.06px
+
+.status-bar
+  width: 29px
+  height: 5px
+  opacity: 0.8 
+  // border-radius: 3px
+  margin-right: 12px
+.status
+  align-items: center
+  padding-left: 60px
+  &-name
+    color: #8d8d8d
+    font-family: FuturaPTBook
+    font-size: 11px
+    font-weight: 400
+    line-height: 20.5px
+    letter-spacing: -0.05px
+  &-green
+    .status-bar
+      opacity: 0.8
+      background-color: #4d678a
+      background-image: linear-gradient(to left, #11ddba 0%, #9df03b 100%)
+  &-yellow
+    .status-bar
+      opacity: 0.8
+      background-color: #663608
+      background-image: linear-gradient(to left, #f57831 0%, #f0e52f 100%)
+
+
+.graph-checkbox
+  &__wrap
+    margin-left: auto
+  &__input
+    opacity: 0
+    width: 0.00001px
+    height: 0.00001px
+    z-index: -1
+  &__label
+    display: block
+    width: 56px
+    height: 26px
+    box-shadow: inset 2px 3px 7px 1px rgba(5, 2, 4, 0.3)
+    border-radius: 13px
+    background-color: #f6f7fb
+    position: relative
+    cursor: pointer
+    &:before
+      content: ""
+      position: absolute
+      width: 28px
+      height: 28px
+      box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3), inset 0px 0px 5px 1px rgba(0, 0, 0, 0.3)
+      // background-color: #ffffff
+      left: -1px
+      top: -1px
+      border: 5px solid #ffffff
+      border-radius: 50%
+      z-index: 8
+      transition: 0.3s
+    &:after
+      content: ""
+      position: absolute
+      width: 20px
+      height: 20px
+      top: 4px
+      left: 4px
+      background-color: transparent
+      border-radius: 50%
+      z-index: 5
+      transition: 0.3s
+  &__title
+    color: #2c3942
+    font-family: FuturaPTMedium
+    // font-family: FuturaPTBook
+    font-size: 14px
+    font-weight: 400
+    line-height: 26px
+    letter-spacing: -0.06px
+    padding-left: 10px
+    white-space: nowrap
+    &-sec
+      padding-right: 10px
+      opacity: 0.5
+      color: #2c3942
+      font-family: FuturaPTBook
+      font-size: 14px
+      font-weight: 400
+      line-height: 26px
+      letter-spacing: -0.06px
+.graph-checkbox__input:checked + .graph-checkbox__label:before
+  left: 30px
+.graph-checkbox__input:checked + .graph-checkbox__label:after
+  background-color: #6de7ae
+  left: 35px
+
+.graph-wrap
+  // height: 500px
+  & canvas
+    height: 370px !important
+    transition: 1s
+    padding-left: 20px
+    padding-bottom: 0px
+.graph-text
+  position: absolute
+  bottom: -5px
+  left: 0
+  color: #848484
+  font-family: FuturaPTBook
+  font-size: 12px
+  font-weight: 400
+  white-space: nowrap
+  padding-left: 12px
+  &__left
+    display: block
+    position: absolute
+    transform: rotate(-90deg)
+    bottom: 100px
+    left: -50px
+  &__bottom
+    display: block
+    position: absolute
+    bottom: 0
+    left: 40px
+.graph-slider
+  width: 100%
+  height: 100px
+  &__wrap
+    margin-left: 40px
+    padding-top: 20px
+    padding-bottom: 25px
+    max-width: 282px
+    & .ui-slider
+      width: 282px
+      height: 16px
+      // box-shadow: inset 2px 3px 7px 1px rgba(5, 2, 4, 0.3)
+      background-color: #f6f7fb
+      background-repeat: no-repeat
+      background-size: 100% 100%
+      background-position: center center
+      background-image: url(../images/slider_bg.png)
+      border: none !important
+      border-radius: 15px !important
+    & .ui-slider-range
+      background-color: rgba(107, 183, 178, 0.3)
+    & .ui-slider-handle
+      cursor: pointer !important
+      top: -8px !important
+      width: 21px !important
+      height: 32px !important
+      background-repeat: no-repeat !important
+      background-size: 100% 100% !important
+      background-position: left center !important
+      border: none !important
+      background-color: transparent !important
+      background-image: url(../images/prev.png) !important
+      text-align: center
+      &:last-child
+        background-position: right center !important
+        background-image: url(../images/next.png) !important
+        & i 
+          transform: rotate(180deg)
+      & i 
+        opacity: 0.3
+        color: #2c3942
+        font-size: 13px
+        line-height: 32px
+        letter-spacing: -0.04px
+  &__text 
+    padding-top: 10px
+  &__title
+    color: #848484
+    font-family: FuturaPTBook
+    font-size: 10px
+    font-weight: 400
+    letter-spacing: -0.05px 
+    display: block
+.ui-slider-range-min
+      
+  
+
+#chartjs-tooltip, #chartjs-tooltip_2, #chartjs-tooltip_3
+  background: rgba(255, 255, 255, 0.8) !important
+  height: 332px !important
+  width: 95px
+  top: 7px !important
+  box-shadow: 0px 0px 73px 22px rgba(117, 141, 139, 0.15)
+.graph-tooltip
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  height: 100%
+  padding-top: 30px
+  padding-bottom: 15px
+  text-align: center
+  overflow: hidden
+  &__name
+    display: block
+    font-family: FuturaPTMedium
+    font-size: 14px
+    font-weight: 400
+    letter-spacing: -0.4px
+  &__title
+    color: #6bb7b2
+    font-family: FuturaPTBook
+    font-size: 24px
+    font-weight: 400
+    letter-spacing: -0.42px
+    text-align: center
+    position: relative
+    padding-top: 25px 
+    padding-bottom: 15px
+    background: #ffffff
+    &:after 
+      position: absolute
+      content: ""
+      height: 35px
+      width: 1px
+      background: #6bb7b2
+      top: -15px
+      left: 50%
+    &:before
+      position: absolute
+      content: ""
+      height: 25px
+      width: 1px
+      background: #6bb7b2
+      bottom: -15px
+      left: 50%
+  &__circle 
+    position: relative
+    width: 27px
+    height: 27px
+    border-radius: 50%
+    // box-shadow: 0px 0px 7px 1px #33333380
+    &:before 
+      content: ""
+      position: absolute
+      width: 17px
+      height: 17px
+      top: 5px
+      left: 5px
+      background: #ffffff
+      display: block
+      border-radius: 50%
+      box-shadow: inset 0px 0px 2px 0px #33333380
+      z-index: 1
+  &__line
+    position: absolute
+    z-index: 0
+    height: 3px
+    width: 100px
+    top: 13.5px
+    left: -35px
+    background-color: red
+
+.graph-table_1
+  & td 
+    width: 71px
+    height: 25px
+  & td:first-child
+    width: 211px
+.table-text__th
+  white-space: nowrap
+
+.font-demi
+  font-family: FuturaPTDemi !important
+.color-tr
+  height: 27px 
+.color-td 
+  width: 77px
+
+
+@media (max-width: 1440px)
+  .box_fs
+    padding-left: 15px
+    padding-right: 15px
+  .box_sec
+    padding-left: 15px
+    padding-right: 15px
+  .title-fs
+    font-size: 18px
+    padding-right: 10px
+  .clndr-item
+    padding-left: 10px
+    padding-right: 10px
+  .clndr-result__space
+    padding-right: 8px
+    padding-left: 8px
+  .clndr-result__wrap
+    margin-left: 15px
+    margin-right: 15px
+  .graph-status
+    padding-right: 20px
+
+
+
+.bgTable1
+  &-1-0
+    background: #e2fbd5 !important
+  &-1-1
+    background: #d7f9c8 !important
+  &-1-2
+    background: #d5f9ca !important
+  &-1-3
+    background: #d3f9cc !important
+  &-1-4
+    background: #b3f2b6 !important 
+  &-1-5
+    background: #a3f2b3 !important
+  &-1-6 
+    background: #a7f1c2 !important
+  &-1-8
+    background: #6de7ae !important
+  &-2-0
+    background: #fcf5cd !important 
+  &-2-1
+    background: #f4dd59 !important
+  &-2-2
+    background: #f4d459 !important
+  &-2-3
+    background: #f5cc59 !important
+  &-2-4
+    background: #f5c559 !important
+  &-2-6
+    background: #f5b959 !important 
+  &-2-8
+    background: #f6a85a !important
+  &-3-0
+    background: #ccf5fa !important
+  &-3-3
+    background: #bbedf8 !important
+  &-3-4
+    background: #a9e1f6 !important
+  &-3-5
+    background: #98d7f5 !important
+  &-3-7
+    background: #75bcf1 !important
+  &-3-10
+    background: #539eed !important
+  &-3-11
+    background: #539ded !important
+  &-4-0
+    background: #e7e6f5 !important
+  &-4-3
+    background: #dfcce5 !important
+  &-4-5
+    background: #e1b8d6 !important
+  &-4-6
+    background: #e0a7c9 !important
+  &-4-7
+    background: #dd97bf !important
+  &-4-8
+    background: #df82af !important
+  &-4-10
+    background: #e16d9f !important
+  &-4-11
+    background: #e4699b !important
+  &-5-0
+    background: #d3e9e8 !important
+  &-5-3
+    background: #c4e2e0 !important
+  &-5-35
+    background: #b5dbd8 !important
+  &-5-38
+    background: #c4e2e0 !important
+  &-5-43
+    background: #b5dbd8 !important
+  &-5-53
+    background: #a6d4d1 !important
+  &-5-55
+    background: #97cdc9 !important
+  &-5-5
+    background: #b5dbd8 !important
+  &-5-58
+    background: #97cdc9 !important
+  &-5-6
+    background: #97cdc9 !important
+  &-5-63
+    background: #97cdc9 !important
+  &-5-85
+    background: #7abeba !important
+
+
+.bgTable2
+  &-1-00
+    background: #ffffff !important
+  &-1-1
+    background: #f6fef1 !important
+  &-1-3
+    background: #e3fbd4 !important
+  &-1-4
+    background: #daf9c5 !important
+  &-1-5
+    background: #d1f8b7 !important
+  &-1-6
+    background: #c8f7a9 !important
+  &-1-8
+    background: #b5f48c !important
+
+  &-2-00
+    background: #ffffff !important
+  &-2-1
+    background: #fef8ee !important
+  &-2-2
+    background: #fdf2de !important
+  &-2-3
+    background: #fcebcd !important
+  &-2-4
+    background: #fbe5bd !important
+  &-2-5
+    background:  !important
+  &-2-6
+    background: #f9d79b !important
+  &-2-7
+    background:  !important
+  &-2-8
+    background: #f7ca7a !important
+  &-2-9
+    background:  !important
+  &-2-10
+    background:  !important
+  &-2-11
+    background:  !important
+
+  &-3-0
+    background:  !important
+  &-3-1
+    background:  !important
+  &-3-2
+    background:  !important
+  &-3-3
+    background: #cceefa !important
+  &-3-4
+    background: #bbe8f8 !important
+  &-3-5
+    background: #a9e2f6 !important
+  &-3-6
+    background:  !important
+  &-3-7
+    background: #87d6f3 !important
+  &-3-8
+    background:  !important
+  &-3-9
+    background: #65cbf0 !important
+  &-3-10
+    background: #54c5ee !important
+  &-3-11
+    background: #54c5ee !important
+
+  &-4-00
+    background: #ffffff !important
+  &-4-0
+    background: #f0b7d0 !important
+  &-4-1
+    background:  !important
+  &-4-2
+    background:  !important
+  &-4-3
+    background: #f6d4e3 !important
+  &-4-4
+    background:  !important
+  &-4-5
+    background: #f0b7d0 !important
+  &-4-6
+    background: #eea9c7 !important
+  &-4-7
+    background: #f0b7d0 !important
+  &-4-8
+    background: #e88cb4 !important
+  &-4-9
+    background:  !important
+  &-4-10
+    background:  !important
+  &-4-11
+    background: #e26fa1 !important
+
+  &-5-00
+    background:  !important
+  &-5-0
+    background:  !important
+  &-5-1
+    background:  !important
+  &-5-2
+    background:  !important
+  &-5-30
+    background: #d3e9e8 !important
+  &-5-35
+    background: #c4e2e0 !important
+  &-5-40
+    background: #c4e2e0 !important
+  &-5-43
+    background: #b5dbd8 !important
+  &-5-58
+    background: #a6d4d1 !important
+  &-5-63
+    background: #97cdc9 !important
+  &-5-68
+    background: #97cdc9 !important
+  &-5-65
+    background: #97cdc9 !important
+  &-5-78
+    background: #89c5c1 !important
+  &-5-70
+    background: #97cdc9 !important
+
+  
+
+
+  

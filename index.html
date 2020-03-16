@@ -1,0 +1,2894 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=1200">
+
+  <meta name="description" content="Wave estate - future project">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Wave estate">
+  <meta property="og:description" content="Wave estate - future project">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wave estate">
+  <meta name="twitter:description" content="Wave estate - future project">
+  <title>Сравни дом</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+  <link rel="stylesheet" href="css/lib.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/calendar.min.css"> -->
+
+
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+  <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://atuin.ru/demo/ui-slider/jquery-ui.css">
+
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+
+</head>
+
+<body class="cabinet-page">
+  <div class="main-wrapper">
+    <header class="header">
+      <div class="header-logo"><a class="header-logo__link" href="#"><img src="images/logo.svg" Alt="Logo"></a></div>
+      <div class="header-toolbar">
+        <div class="header__container">
+          <div class="header-nav">
+            <div class="theme-box">
+              <div class="theme-box__title">Светлая тема</div>
+              <label class="switch"><input class="switch__checkbox" type="checkbox"><span
+                  class="switch__slider"></span></label>
+              <div class="theme-box__title theme-box__title_disabled">Темная тема</div>
+            </div>
+            <div class="user-box">
+              <div class="user-box__info">
+                <div class="user-box__title">User</div>
+                <a class="user-box__link dashed-link" id="logout" href="#">Выйти</a>
+              </div>
+              <img class="user-box__avatar" src="images/user.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="wrapper">
+      <nav class="sidebar">
+        <ul class="navbar-menu">
+          <li class="active"><a class="navbar-menu__link" href="#">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.3243 0H1.67575C0.751759 0 9.54935e-05 0.748003 9.54935e-05 1.67201V6.31403H22V1.67201C22 0.748003 21.2483 0 20.3243 0Z" fill="#ffffff"/>
+              <path d="M7.8797 22H20.3243C21.2483 22 22 21.252 22 20.328V7.90528H7.8797V22Z" fill="#ffffff"/>
+              <path d="M0 20.328C0 21.252 0.751663 22 1.67566 22H6.32864V7.90528H0V20.328Z" fill="#ffffff"/>
+            </svg>
+            Главная</a>
+          </li>
+          <li><a class="navbar-menu__link" href="#">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.3951 7.32092L16.4194 2.6061L18.8614 0.162476L21.3951 2.69783V7.32092Z" fill="#ffffff"/>
+              <path d="M20.3243 22H1.67567C0.751667 22 0 21.2515 0 20.3269V10.1744L11.2383 0L22 10.1744V20.3269C22 21.2515 21.2483 22 20.3243 22Z" fill="#ffffff"/>
+              </svg>
+            Жилые комплексы</a></li>
+          <li><a class="navbar-menu__link" href="#">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.3816 0.272625C10.2492 1.04157 10.1098 1.76857 9.99827 2.50256C9.9704 2.71227 9.94949 2.9779 10.061 3.13169C10.1725 3.28548 10.4373 3.39034 10.6394 3.39733C10.9251 3.40432 11.0785 3.16664 11.1272 2.89402C11.2318 2.32081 11.3224 1.75459 11.4269 1.18138C11.4409 1.11846 11.4548 1.05555 11.4896 0.929721C12.8346 2.04119 13.4619 3.45325 13.6431 5.13793C10.4722 5.13793 7.30825 5.13793 4.1513 5.13793C4.08161 3.82374 5.12696 1.70565 6.19321 1.04856C6.29775 1.66371 6.40228 2.25789 6.50681 2.85907C6.5556 3.15266 6.72285 3.34839 7.02252 3.39034C7.28734 3.43228 7.51732 3.31344 7.61488 3.06179C7.6776 2.90101 7.6776 2.69829 7.64973 2.52353C7.53822 1.80352 7.40581 1.0905 7.26643 0.314567C7.66367 0.18874 8.03999 0 8.89717 0C9.75436 0 10.1655 0.18175 10.3816 0.272625Z" fill="#ffffff"/>
+              <path d="M15.462 17.7346C15.1414 17.3991 14.8417 17.0705 14.5351 16.7629C13.5455 15.7843 12.089 15.7633 11.1482 16.7C10.2004 17.6437 10.2213 19.1047 11.19 20.0974C11.406 20.3211 11.636 20.5238 11.859 20.7405C11.8451 20.7754 11.8381 20.8174 11.8241 20.8523C11.0506 20.9292 10.277 21.0481 9.49651 21.076C6.41622 21.2018 3.50318 20.5657 0.785282 19.0838C0.248671 18.7902 0.0256637 18.3847 0.00475671 17.7696C-0.0440261 16.2666 0.276547 14.8895 1.23827 13.7081C2.1303 12.6107 3.28715 11.9605 4.67397 11.7159C4.90395 11.6739 5.04333 11.7299 5.18271 11.9466C5.88658 13.0371 6.81345 13.841 8.13059 14.0786C9.2735 14.2883 10.2979 13.9738 11.1691 13.2328C11.6151 12.8553 11.9705 12.373 12.3399 11.9186C12.4653 11.7648 12.5559 11.6879 12.758 11.7089C14.7581 11.9396 16.7373 13.6313 17.246 15.5746C17.2739 15.6724 17.2669 15.8262 17.2112 15.8891C16.6467 16.4903 16.0683 17.0915 15.462 17.7346Z" fill="#ffffff"/>
+              <path d="M4.5555 7.10922C7.364 7.10922 10.1167 7.10922 12.9601 7.10922C12.8625 7.73137 12.7998 8.33254 12.6604 8.91973C12.3956 10.0801 11.8938 11.1287 11.0297 11.9745C9.64982 13.3307 7.83092 13.3377 6.45106 11.9815C5.41268 10.9539 4.91092 9.66071 4.67397 8.24866C4.62519 7.88516 4.60428 7.51467 4.5555 7.10922Z" fill="#ffffff"/>
+              <path d="M15.5107 19.8387C15.7616 19.5731 15.9707 19.3494 16.1867 19.1257C17.5875 17.6437 18.9883 16.1618 20.3821 14.6728C20.619 14.4212 20.8838 14.2604 21.2392 14.3093C21.5877 14.3652 21.8386 14.561 21.9501 14.8965C22.0616 15.246 21.9849 15.5606 21.734 15.8262C21.0511 16.5462 20.3681 17.2732 19.6852 18.0002C18.5492 19.2026 17.4133 20.4119 16.2704 21.6143C15.7965 22.1106 15.3086 22.1316 14.8278 21.6562C13.9776 20.8034 13.1273 19.9506 12.2771 19.0977C11.8381 18.6573 11.8102 18.1261 12.2005 17.7486C12.5838 17.3781 13.0925 17.4131 13.5246 17.8395C14.1727 18.4896 14.8208 19.1467 15.5107 19.8387Z" fill="#ffffff"/>
+              <path d="M8.81355 6.34727C7.11312 6.34727 5.41268 6.34727 3.70528 6.34727C3.44743 6.34727 3.2523 6.33329 3.24533 5.99076C3.23836 5.64823 3.42653 5.59231 3.70528 5.59231C7.13402 5.5993 10.5628 5.59231 13.9845 5.59231C14.2284 5.59231 14.4166 5.62027 14.4236 5.94183C14.4305 6.24241 14.319 6.35426 14.0194 6.35426C12.8068 6.34028 11.5872 6.34727 10.3746 6.34727C9.85889 6.34727 9.33622 6.34727 8.81355 6.34727Z" fill="#ffffff"/>
+              </svg>
+              
+            Застройщики</a></li>
+          <li><a class="navbar-menu__link" href="#">
+            <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.7702 3.43511H2.25466V2.33588H19.8137V1.23664C19.8137 0.556489 19.2602 0 18.5839 0H2.73292C1.22298 0 0 1.22977 0 2.74809V15.2519C0 16.7702 1.22298 18 2.73292 18H19.2671C20.777 18 22 16.7702 22 15.2519V4.67176C22 3.98473 21.4534 3.43511 20.7702 3.43511ZM18.1056 12.2977C17.1969 12.2977 16.4658 11.5626 16.4658 10.6489C16.4658 9.73511 17.1969 9 18.1056 9C19.0143 9 19.7453 9.73511 19.7453 10.6489C19.7453 11.5626 19.0143 12.2977 18.1056 12.2977Z" fill="white"/>
+              </svg>
+              
+            Аналитика продаж</a>
+          </li>
+          <li><a class="navbar-menu__link" href="#">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.9737 3.59229C18.7228 3.75809 17.7544 4.83166 17.7544 6.12711V6.46483H4.82458V6.12711C4.82458 4.83166 3.85619 3.75809 2.60529 3.59229V6.46483H0V14.1359H4.96932V18.8157H9.55264V10.6622H12.7369V21.9998H17.2237C17.65 21.9998 17.9956 21.6542 17.9956 21.2279V11.7718C17.9956 11.3455 18.3412 10.9999 18.7675 10.9999H21.228C21.6544 10.9999 22 10.6543 22 10.228V6.46483H19.9737V3.59229Z" fill="#ffffff"/>
+              <path d="M20.0702 0H12.7369V5.78944H17.0965C17.2659 4.16516 18.643 2.89472 20.3115 2.89472H20.6492V5.78944H22V1.92981C22 0.864006 21.136 0 20.0702 0Z" fill="#ffffff"/>
+              <path d="M12.0614 0H1.92983C0.864025 0 0 0.864006 0 1.92981V5.78944H1.92985V2.89472H2.26757C3.93594 2.89472 5.31315 4.16516 5.48249 5.78944H12.0614V0Z" fill="#ffffff"/>
+              <path d="M12.0614 11.3378H10.2281V19.4913H4.29388V14.8115H0V20.0702C0 21.136 0.864025 22 1.92983 22H12.0614V11.3378Z" fill="#ffffff"/>
+              </svg>
+              
+            Планировки</a></li>
+          <li><a class="navbar-menu__link" href="#">
+            <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.8529e-09 7.73008C0 7.38406 0 7.03805 0 6.69203C0.0650577 6.35897 0.273468 6.16564 0.55407 6.00443C1.80997 5.2829 3.056 4.54294 4.30874 3.81544C4.42937 3.74539 4.47953 3.67265 4.47757 3.52414C4.46872 2.85253 4.47295 2.18073 4.47402 1.50901C4.47468 1.09629 4.65321 0.908947 5.04695 0.907764C5.52189 0.906338 5.99684 0.906845 6.47178 0.907575C6.89795 0.90823 7.06134 1.07938 7.06303 1.52582C7.06384 1.74116 7.06317 1.9565 7.06317 2.20032C7.16253 2.14449 7.22432 2.11093 7.28508 2.07547C8.37996 1.43655 9.47864 0.80446 10.5672 0.154167C10.9102 -0.0507461 11.213 -0.0512606 11.5581 0.151868C14.8412 2.08481 18.1285 4.01025 21.4176 5.93229C21.6704 6.07998 21.8882 6.24623 22 6.53233C22 6.85173 22 7.17113 22 7.49053C21.9915 7.53514 21.9796 7.57937 21.9749 7.62441C21.9214 8.1424 21.6699 8.37971 21.1675 8.38138C20.7246 8.38285 20.2817 8.38027 19.8388 8.38223C19.5111 8.38367 19.5471 8.34302 19.547 8.6754C19.5462 12.0212 19.5472 15.3669 19.546 18.7127C19.5457 19.5053 19.0733 19.9991 18.3131 19.9993C13.4347 20.0005 8.55624 20.0002 3.67779 19.9984C3.55685 19.9984 3.43201 19.9921 3.31563 19.9616C2.76136 19.8161 2.4399 19.3469 2.4398 18.693C2.43926 15.3473 2.43954 12.0015 2.43953 8.65571C2.43953 8.57156 2.43953 8.48741 2.43953 8.38175C2.34472 8.38175 2.27561 8.38176 2.2065 8.38175C1.72507 8.38166 1.24364 8.37975 0.762224 8.38223C0.52196 8.38347 0.316556 8.30088 0.17573 8.09938C0.0991443 7.98979 0.0574384 7.85403 3.8529e-09 7.73008ZM11.7128 7.03993C11.7128 6.75919 11.7143 6.48069 11.7123 6.20222C11.7106 5.97927 11.6353 5.89679 11.4277 5.89436C11.1581 5.89121 10.8885 5.891 10.6189 5.89449C10.4238 5.89702 10.3561 5.96801 10.3525 6.1739C10.3484 6.40663 10.3446 6.63977 10.3537 6.87218C10.3593 7.01403 10.3235 7.07603 10.1758 7.11175C9.10168 7.3715 8.39967 8.27651 8.3974 9.38412C8.39512 10.4944 9.10471 11.4355 10.1789 11.6766C10.562 11.7625 10.9681 11.7457 11.3642 11.7604C11.8682 11.7792 12.2698 12.1789 12.2694 12.6791C12.269 13.1992 11.896 13.5882 11.3775 13.6017C11.1209 13.6083 10.864 13.604 10.6073 13.6035C10.2352 13.6029 10.0616 13.4743 9.90771 13.1283C9.87164 13.0472 9.77028 12.9486 9.69395 12.9438C9.37427 12.9238 9.05248 12.9296 8.73188 12.9399C8.57807 12.9449 8.50814 13.044 8.52229 13.2097C8.59121 14.017 9.16637 14.7348 9.92802 14.9545C10.0558 14.9913 10.187 15.0158 10.3258 15.0482C10.3258 15.3442 10.3233 15.6296 10.3267 15.915C10.329 16.1144 10.4029 16.1908 10.5962 16.1933C10.8721 16.1968 11.1482 16.196 11.4242 16.1936C11.6407 16.1917 11.7105 16.1189 11.7122 15.8934C11.7144 15.6015 11.7127 15.3095 11.7127 15.0235C11.735 15.0112 11.7447 15.0023 11.7556 15.0002C12.7995 14.7997 13.6102 13.8443 13.6401 12.779C13.6728 11.6127 12.9727 10.6377 11.8777 10.3962C11.5008 10.3131 11.1002 10.3363 10.7101 10.3275C10.1747 10.3154 9.77081 9.91711 9.76876 9.38074C9.76691 8.89598 10.1781 8.4959 10.6955 8.48505C10.9586 8.47952 11.2219 8.48272 11.485 8.48385C11.8127 8.48526 11.9969 8.61076 12.1103 8.9353C12.1653 9.09282 12.2607 9.15481 12.4128 9.15385C12.6695 9.15223 12.9263 9.15434 13.183 9.15343C13.4926 9.15233 13.5798 9.05083 13.5148 8.73468C13.3466 7.91602 12.8779 7.37495 12.101 7.13093C11.9792 7.09268 11.8522 7.07211 11.7128 7.03993Z" fill="#ffffff"/>
+              </svg>
+              
+            Ценообразование</a>
+          </li>
+          <li><a class="navbar-menu__link" href="#">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 12.4505C22 12.7228 22 12.9952 22 13.2675C21.9918 13.3831 21.9765 13.4987 21.9764 13.6143C21.975 16.1886 21.9754 18.763 21.975 21.3373C21.975 21.4215 21.9767 21.5065 21.9661 21.5897C21.9394 21.7996 21.7842 21.9582 21.574 21.9881C21.4847 22.0008 21.393 21.9996 21.3024 21.9996C14.4863 22.0001 7.67026 22.0001 0.854207 21.9996C0.757135 21.9996 0.65895 21.9999 0.563202 21.9864C0.273714 21.9457 0.0427833 21.7064 0.00899401 21.416C3.78443e-05 21.339 0.000373463 21.2607 0.000369327 21.183C8.62496e-06 14.4067 2.71981e-05 7.63046 0.000113347 0.854199C0.00011409 0.79585 -0.000773405 0.737384 0.00240644 0.679173C0.0196745 0.363056 0.205247 0.130657 0.509414 0.0414884C0.552278 0.0289227 0.594418 0.0138905 0.636893 3.89078e-09C0.688777 0 0.74066 0 0.792544 0C1.22089 0.14738 1.3933 0.457503 1.36955 0.897257C1.36222 1.03296 1.37028 1.16947 1.37029 1.30561C1.37057 5.80477 1.37072 10.3039 1.37089 14.8031C1.37089 14.8768 1.37089 14.9505 1.37089 15.0242C1.43754 14.9679 1.46777 14.9069 1.49584 14.845C1.86895 14.0218 2.2923 13.2294 2.90591 12.5545C3.27741 12.1459 3.69893 11.799 4.23568 11.6407C5.27092 11.3353 6.16073 11.6512 6.90749 12.3722C7.26838 12.7206 7.55277 13.1476 7.87733 13.5344C8.17257 13.8863 8.45181 14.2561 8.78029 14.5745C9.26025 15.0397 9.86141 15.2331 10.528 15.1696C11.0799 15.117 11.4565 14.77 11.7727 14.3503C12.1974 13.7866 12.4929 13.152 12.7398 12.4962C13.1751 11.3396 13.5859 10.1737 14.0269 9.01929C14.3142 8.26734 14.6663 7.54477 15.1911 6.92239C15.5494 6.4975 15.9734 6.16077 16.5261 6.03186C17.3327 5.84377 18.0349 6.09665 18.6717 6.58008C19.1306 6.92846 19.4977 7.36491 19.8302 7.83111C20.6268 8.948 21.1757 10.1895 21.6499 11.4677C21.7709 11.7937 21.8835 12.1228 22 12.4505Z" fill="#ffffff"/>
+              </svg>
+              
+            Анализ локации</a>
+          </li>
+        </ul>
+        <a class="nav-link" href="#"></a>
+      </nav>
+      <div class="content">
+
+        <div class="container">
+
+          <div class="box">
+
+            <div class="box_fs bg-1 flex-col relative">
+              <div class="search-wrap flex space-between">
+                <form method="GET" class="search-search flex">
+
+                  <div class="search-search__wrap">
+                    <i class="fas fa-search"></i>
+                    <input class="search__input" type="text" placeholder="Поиск по ЖК...">
+                    <i class="fas fa-times clearSearch"></i>
+                  </div>
+
+                  <div class="comand-select dropdown required-select search-search__select">
+                    <div class="select">
+                      <span class="main-small">Город</span>
+                      <i class="fa fa-chevron-left"></i>
+                    </div>
+                    <input type="hidden" name="gender">
+                    <ul class="dropdown-menu">
+                      <li id="location_1">Город 1</li>
+                      <li id="location_2">Город 2</li>
+                      <li id="location_3">Город 3</li>
+                      <li id="location_4">Город 4</li>
+                    </ul>
+                  </div>
+
+                  <div class="comand-select dropdown required-select search-search__select">
+                    <div class="select">
+                      <span class="main-small">Застройщик</span>
+                      <i class="fa fa-chevron-left"></i>
+                    </div>
+                    <input type="hidden" name="gender">
+                    <ul class="dropdown-menu">
+                      <li id="builder_1">Застройщик 1</li>
+                      <li id="builder_2">Застройщик 2</li>
+                      <li id="builder_3">Застройщик 3</li>
+                      <li id="builder_4">Застройщик 4</li>
+                    </ul>
+                  </div>
+
+                </form>
+
+                <div class="comand-select dropdown required-select search-search__select search-search__select-sec">
+                  <div class="select">
+                    <span class="main-small">Мои подборки</span>
+                    <i class="fa fa-chevron-left"></i>
+                  </div>
+                  <input type="hidden" name="gender">
+                  <ul class="dropdown-menu">
+                    <li id="selection_1">Мои подборки 1</li>
+                    <li id="selection_2">Мои подборки 2</li>
+                    <li id="selection_3">Мои подборки 3</li>
+                    <li id="selection_4">Мои подборки 4</li>
+                  </ul>
+                </div>
+
+              </div>
+
+              <div class="filter-wrap flex">
+                <div class="filter-item flex-center">
+                  <div class="filter-icon">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <span class="filter-text">ЖК Облака</span>
+                  <div class="filter-icon filter-icon__remove">
+                    <i class="fas fa-times"></i>
+                  </div>
+                </div>
+                <div class="filter-item flex-center">
+                  <div class="filter-icon">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <span class="filter-text">ЖК Авангард </span>
+                  <div class="filter-icon filter-icon__remove">
+                    <i class="fas fa-times"></i>
+                  </div>
+                </div>
+                <div class="filter-item flex-center">
+                  <div class="filter-icon">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <span class="filter-text">ЖК Молоко и Мёд</span>
+                  <div class="filter-icon filter-icon__remove">
+                    <i class="fas fa-times"></i>
+                  </div>
+                </div>
+                <div class="filter-item flex-center filter-item_active" data-id="3">
+                  <div class="filter-icon">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <span class="filter-text">ЖК Капитал</span>
+                  <div class="filter-icon filter-icon__remove">
+                    <i class="fas fa-times"></i>
+                  </div>
+                </div>
+                <div class="filter-item flex-center">
+                  <div class="filter-icon">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <span class="filter-text">ЖК Республика</span>
+                  <div class="filter-icon filter-icon__remove">
+                    <i class="fas fa-times"></i>
+                  </div>
+                </div>
+                <div class="filter-item flex-center">
+                  <div class="filter-icon">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <span class="filter-text">ЖК Сосновый</span>
+                  <div class="filter-icon filter-icon__remove">
+                    <i class="fas fa-times"></i>
+                  </div>
+                </div>
+                <div class="filter-item flex-center">
+                  <div class="filter-icon">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <span class="filter-text">ЖК Столичный</span>
+                  <div class="filter-icon filter-icon__remove">
+                    <i class="fas fa-times"></i>
+                  </div>
+                </div>
+                <div class="filter-item flex-center">
+                  <div class="filter-icon">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <span class="filter-text">ЖК Красивый</span>
+                  <div class="filter-icon filter-icon__remove">
+                    <i class="fas fa-times"></i>
+                  </div>
+                </div>
+                <div class="filter-item flex-center">
+                  <div class="filter-icon">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <span class="filter-text">ЖК Облака</span>
+                  <div class="filter-icon filter-icon__remove">
+                    <i class="fas fa-times"></i>
+                  </div>
+                </div>
+                <div class="filter-item flex-center">
+                  <div class="filter-icon">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <span class="filter-text">ЖК Металлург</span>
+                  <div class="filter-icon filter-icon__remove">
+                    <i class="fas fa-times"></i>
+                  </div>
+                </div>
+                <div class="filter-item flex-center">
+                  <div class="filter-icon">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <span class="filter-text">ЖК Хорошо</span>
+                  <div class="filter-icon filter-icon__remove">
+                    <i class="fas fa-times"></i>
+                  </div>
+                </div>
+                <div class="filter-item flex-center">
+                  <div class="filter-icon">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <span class="filter-text">ЖК Покровский</span>
+                  <div class="filter-icon filter-icon__remove">
+                    <i class="fas fa-times"></i>
+                  </div>
+                </div>
+                <div class="filter-item flex-center">
+                  <div class="filter-icon">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <span class="filter-text">Город Оружейников</span>
+                  <div class="filter-icon filter-icon__remove">
+                    <i class="fas fa-times"></i>
+                  </div>
+                </div>
+                <div class="filter-item flex-center filter-item_active" data-id="13">
+                  <div class="filter-icon">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <span class="filter-text">Норвежский лес</span>
+                  <div class="filter-icon filter-icon__remove">
+                    <i class="fas fa-times"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="filter-check">
+                <i class="fas fa-check"></i>
+              </div>
+
+            </div>
+
+            <div class="box_sec filter-selected flex relative">
+
+
+
+              <span class="filter-selected__title">Выбранные ЖК</span>
+              <i class="fa fa-chevron-down"></i>
+              <div class="filter-item__selected-wrap flex">
+
+                <div class="filter-item flex-center filter-item_active" data-id="3">
+                  <div class="filter-icon">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <span class="filter-text">ЖК Капитал</span>
+                  <div class="filter-icon filter-icon__remove">
+                    <i class="fas fa-times"></i>
+                  </div>
+                </div>
+                <div class="filter-item flex-center filter-item_active" data-id="13">
+                  <div class="filter-icon">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <span class="filter-text">Норвежский лес</span>
+                  <div class="filter-icon filter-icon__remove">
+                    <i class="fas fa-times"></i>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="box">
+
+            <div class="box_fs relative">
+              <div class="flex space-between">
+                <div class="title__wrap flex">
+                  <span class="title ">Результаты продаж</span>
+                </div>
+                <div class="clndr__wrap flex">
+                  <div class="flex-col">
+                    <div class="clndr-items flex">
+                      <div class="clndr-item">Весь период</div>
+                      <div class="clndr-item">Год</div>
+                      <div class="clndr-item clndr-item_active">Квартал</div>
+                      <div class="clndr-item">Месяц</div>
+                      <div class="clndr-item clndr-item__adv openClndr">...</div>
+                    </div>
+                    <div class="flex-center flex-col">
+                      <div class="date-set__wrap flex-center">
+                        <span class="date-set date-year">2019</span>
+                        <span class="date-set date-section">3 квартал</span>
+                        <span class="date-set date-month">Октябрь</span>
+                      </div>
+                      <div class="date-btn__wrap flex-center">
+                        <div class="date-btns">
+                          <div class="date-btn date-btn-prev prev-year">
+                            <i class="fas fa-chevron-left"></i>
+                          </div>
+                          <div class="date-btn date-btn-next next-year">
+                            <i class="fas fa-chevron-right"></i>
+                          </div>
+                        </div>
+                        <div class="date-btns">
+                          <div class="date-btn date-btn-prev prev-section">
+                            <i class="fas fa-chevron-left"></i>
+                          </div>
+                          <div class="date-btn date-btn-next next-section">
+                            <i class="fas fa-chevron-right"></i>
+                          </div>
+                        </div>
+                        <div class="date-btns">
+                          <div class="date-btn date-btn-prev prev-month">
+                            <i class="fas fa-chevron-left"></i>
+                          </div>
+                          <div class="date-btn date-btn-next next-month">
+                            <i class="fas fa-chevron-right"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clndr-result__wrap flex space-between">
+                    <div class="clndr__result clndr__result-from clndr_disable">6.02.2019</div>
+                    <span class="block clndr-result__space clndr_disable">—</span>
+                    <div class="clndr__result clndr__result-to clndr_disable">28.03.2019</div>
+
+
+
+                    <div class="clndr-popup">
+                      <div class="flex w-100 clndr-popup__title">
+                        <span class="clndr__result-text">Период</span>
+                        <div class="clndr__result clndr__result-from">6.02.2019</div>
+                        <span class="block clndr-result__space">—</span>
+                        <div class="clndr__result clndr__result-to">28.03.2019</div>
+                        <i class="fas fa-times clndr-popup__close"></i>
+                      </div>
+                      <!-- <input type="date" name="" id="clndr"> -->
+                      <div class="clndr" id="clndr">
+                        <!-- <button id="test" style="color: #000">test</button> -->
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <button class="main-btn">Показать</button>
+              </div>
+
+
+
+              <table class="table compact" id="table_1" width="100%" data-class-name="compact">
+                <thead>
+                  <tr>
+                    <td width="130px">
+                      <span class="table-text__fs">Результаты продаж</span>
+                    </td>
+                    <td width="160px" class="order-column" data-class-name="order-column">
+                      <div class="flex">
+                        <button class="table__button table__button_active">Квартиры</button>
+                        <button class="table__button">м<sup>2</sup></button>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__sec">Название ЖК</span>
+                    </td>
+                    <td>
+                      <span class="table-text__sec">Готовность,<br> %</span>
+                    </td>
+                    <td>
+                      <span class="table-text__sec">Продано квартир<br> шт</span>
+                    </td>
+                    <td>
+                      <span class="table-text__sec">Остаток,<br> шт</span>
+                    </td>
+                    <td>
+                      <span class="table-text__sec">Среднемесячное<br> число продаж</span>
+                    </td>
+                    <td>
+                      <span class="table-text__sec">Диапазон цен,<br> млн. руб.</span>
+                    </td>
+                    <td>
+                      <span class="table-text__sec">Средняя цена,<br> руб./м²</span>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="table-text__th">ЖК Облака</span>
+                    </td>
+                    <td>
+                      <div class="table-progress">
+                        <div class="table-progress__bar table-progress__bar-fs" data-progress="100%">
+                          <span class="table-progress__text-fs">15</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">ЖК Облака</span>
+                    </td>
+                    <td>
+                      <div class="table-progress table-progress_sec">
+                        <div class="table-progress__bar table-progress__bar-sec" data-progress="20%"></div>
+                        <span class="table-progress__text-sec">20%</span>
+                      </div>
+                    </td>
+                    <td class="table-popup__wrap">
+                      <div class="flex">
+                        <div class="table-progress table-progress_sec">
+                          <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                          <span class="table-progress__text-sec">20/180</span>
+                        </div>
+                        <div class="table-progress__show">
+                          <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="table-popup flex-col">
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">8/180</span>
+                            </div>
+                            <span class="table-text__th">Студия</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">10/180</span>
+                            </div>
+                            <span class="table-text__th">1к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">3/180</span>
+                            </div>
+                            <span class="table-text__th">2к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">2/180</span>
+                            </div>
+                            <span class="table-text__th">3к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">25/180</span>
+                            </div>
+                            <span class="table-text__th">4к. кв</span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">52</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th text-center">12</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">1,3 -5,6</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">60 000</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="table-text__th">ЖК Республика</span>
+                    </td>
+                    <td>
+                      <div class="table-progress">
+                        <div class="table-progress__bar table-progress__bar-fs" data-progress="89%">
+                          <span class="table-progress__text-fs">12</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">ЖК Республика</span>
+                    </td>
+                    <td>
+                      <div class="table-progress table-progress_sec">
+                        <div class="table-progress__bar table-progress__bar-sec" data-progress="5%"></div>
+                        <span class="table-progress__text-sec">5%</span>
+                      </div>
+                    </td>
+                    <td class="table-popup__wrap">
+                      <div class="flex">
+                        <div class="table-progress table-progress_sec">
+                          <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                          <span class="table-progress__text-sec">20/180</span>
+                        </div>
+                        <div class="table-progress__show">
+                          <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="table-popup flex-col">
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">8/180</span>
+                            </div>
+                            <span class="table-text__th">Студия</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">10/180</span>
+                            </div>
+                            <span class="table-text__th">1к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">3/180</span>
+                            </div>
+                            <span class="table-text__th">2к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">2/180</span>
+                            </div>
+                            <span class="table-text__th">3к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">25/180</span>
+                            </div>
+                            <span class="table-text__th">4к. кв</span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">135</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th text-center">11</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">2,5 -10,2</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">70 000</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="table-text__th">ЖК Капитал</span>
+                    </td>
+                    <td>
+                      <div class="table-progress">
+                        <div class="table-progress__bar table-progress__bar-fs" data-progress="83%">
+                          <span class="table-progress__text-fs">11</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">ЖК Капитал</span>
+                    </td>
+                    <td>
+                      <div class="table-progress table-progress_sec">
+                        <div class="table-progress__bar table-progress__bar-sec" data-progress="50%"></div>
+                        <span class="table-progress__text-sec">50%</span>
+                      </div>
+                    </td>
+                    <td class="table-popup__wrap">
+                      <div class="flex">
+                        <div class="table-progress table-progress_sec">
+                          <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                          <span class="table-progress__text-sec">20/180</span>
+                        </div>
+                        <div class="table-progress__show">
+                          <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="table-popup flex-col">
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">8/180</span>
+                            </div>
+                            <span class="table-text__th">Студия</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">10/180</span>
+                            </div>
+                            <span class="table-text__th">1к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">3/180</span>
+                            </div>
+                            <span class="table-text__th">2к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">2/180</span>
+                            </div>
+                            <span class="table-text__th">3к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">25/180</span>
+                            </div>
+                            <span class="table-text__th">4к. кв</span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">91</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th text-center">10</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">2,4 - 8,5</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">68 000</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="table-text__th">ЖК Молоко и мёд</span>
+                    </td>
+                    <td>
+                      <div class="table-progress">
+                        <div class="table-progress__bar table-progress__bar-fs" data-progress="76%">
+                          <span class="table-progress__text-fs">10</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">ЖК Молоко и мёд</span>
+                    </td>
+                    <td>
+                      <div class="table-progress table-progress_sec">
+                        <div class="table-progress__bar table-progress__bar-sec" data-progress="70%"></div>
+                        <span class="table-progress__text-sec">70%</span>
+                      </div>
+                    </td>
+                    <td class="table-popup__wrap">
+                      <div class="flex">
+                        <div class="table-progress table-progress_sec">
+                          <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                          <span class="table-progress__text-sec">20/180</span>
+                        </div>
+                        <div class="table-progress__show">
+                          <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="table-popup flex-col">
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">8/180</span>
+                            </div>
+                            <span class="table-text__th">Студия</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">10/180</span>
+                            </div>
+                            <span class="table-text__th">1к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">3/180</span>
+                            </div>
+                            <span class="table-text__th">2к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">2/180</span>
+                            </div>
+                            <span class="table-text__th">3к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">25/180</span>
+                            </div>
+                            <span class="table-text__th">4к. кв</span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">75</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th text-center">9</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">1,3 -5,6</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">52 000</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="table-text__th">ЖК Авангард</span>
+                    </td>
+                    <td>
+                      <div class="table-progress">
+                        <div class="table-progress__bar table-progress__bar-fs" data-progress="69%">
+                          <span class="table-progress__text-fs">9</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">ЖК Авангард</span>
+                    </td>
+                    <td>
+                      <div class="table-progress table-progress_sec">
+                        <div class="table-progress__bar table-progress__bar-sec" data-progress="80%"></div>
+                        <span class="table-progress__text-sec">80%</span>
+                      </div>
+                    </td>
+                    <td class="table-popup__wrap">
+                      <div class="flex">
+                        <div class="table-progress table-progress_sec">
+                          <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                          <span class="table-progress__text-sec">20/180</span>
+                        </div>
+                        <div class="table-progress__show">
+                          <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="table-popup flex-col">
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">8/180</span>
+                            </div>
+                            <span class="table-text__th">Студия</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">10/180</span>
+                            </div>
+                            <span class="table-text__th">1к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">3/180</span>
+                            </div>
+                            <span class="table-text__th">2к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">2/180</span>
+                            </div>
+                            <span class="table-text__th">3к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">25/180</span>
+                            </div>
+                            <span class="table-text__th">4к. кв</span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">55</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th text-center">8</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">1,5 -6,5</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">59 000</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="table-text__th">ЖК Столичный</span>
+                    </td>
+                    <td>
+                      <div class="table-progress">
+                        <div class="table-progress__bar table-progress__bar-fs" data-progress="63%">
+                          <span class="table-progress__text-fs">8</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">ЖК Столичный</span>
+                    </td>
+                    <td>
+                      <div class="table-progress table-progress_sec">
+                        <div class="table-progress__bar table-progress__bar-sec" data-progress="90%"></div>
+                        <span class="table-progress__text-sec">90%</span>
+                      </div>
+                    </td>
+                    <td class="table-popup__wrap">
+                      <div class="flex">
+                        <div class="table-progress table-progress_sec">
+                          <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                          <span class="table-progress__text-sec">20/180</span>
+                        </div>
+                        <div class="table-progress__show">
+                          <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="table-popup flex-col">
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">8/180</span>
+                            </div>
+                            <span class="table-text__th">Студия</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">10/180</span>
+                            </div>
+                            <span class="table-text__th">1к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">3/180</span>
+                            </div>
+                            <span class="table-text__th">2к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">2/180</span>
+                            </div>
+                            <span class="table-text__th">3к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">25/180</span>
+                            </div>
+                            <span class="table-text__th">4к. кв</span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">221</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th text-center">7</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">1,2 -4,5</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">50 000</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="table-text__th">ЖК Красивый</span>
+                    </td>
+                    <td>
+                      <div class="table-progress">
+                        <div class="table-progress__bar table-progress__bar-fs" data-progress="50%">
+                          <span class="table-progress__text-fs">6</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">ЖК Красивый</span>
+                    </td>
+                    <td>
+                      <div class="table-progress table-progress_sec">
+                        <div class="table-progress__bar table-progress__bar-sec" data-progress="100%"></div>
+                        <span class="table-progress__text-sec">100%</span>
+                      </div>
+                    </td>
+                    <td class="table-popup__wrap">
+                      <div class="flex">
+                        <div class="table-progress table-progress_sec">
+                          <div class="table-progress__bar table-progress__bar-sec" data-progress="90%"></div>
+                          <span class="table-progress__text-sec">900/1000</span>
+                        </div>
+                        <div class="table-progress__show">
+                          <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="table-popup flex-col">
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">8/180</span>
+                            </div>
+                            <span class="table-text__th">Студия</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">10/180</span>
+                            </div>
+                            <span class="table-text__th">1к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">3/180</span>
+                            </div>
+                            <span class="table-text__th">2к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">2/180</span>
+                            </div>
+                            <span class="table-text__th">3к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">25/180</span>
+                            </div>
+                            <span class="table-text__th">4к. кв</span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">17</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th text-center">6</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">1,2 -5,5</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">50 000</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="table-text__th">ЖК Сосновый</span>
+                    </td>
+                    <td>
+                      <div class="table-progress">
+                        <div class="table-progress__bar table-progress__bar-fs" data-progress="43%">
+                          <span class="table-progress__text-fs">5</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">ЖК Сосновый</span>
+                    </td>
+                    <td>
+                      <div class="table-progress table-progress_sec">
+                        <div class="table-progress__bar table-progress__bar-sec" data-progress="90%"></div>
+                        <span class="table-progress__text-sec">90%</span>
+                      </div>
+                    </td>
+                    <td class="table-popup__wrap">
+                      <div class="flex">
+                        <div class="table-progress table-progress_sec">
+                          <div class="table-progress__bar table-progress__bar-sec" data-progress="0%"></div>
+                          <span class="table-progress__text-sec">0/245</span>
+                        </div>
+                        <div class="table-progress__show">
+                          <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="table-popup flex-col">
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">8/180</span>
+                            </div>
+                            <span class="table-text__th">Студия</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">10/180</span>
+                            </div>
+                            <span class="table-text__th">1к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">3/180</span>
+                            </div>
+                            <span class="table-text__th">2к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">2/180</span>
+                            </div>
+                            <span class="table-text__th">3к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">25/180</span>
+                            </div>
+                            <span class="table-text__th">4к. кв</span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">9</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th text-center">5</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">1,4 -4,2</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">51 000</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="table-text__th">ЖК Капитал</span>
+                    </td>
+                    <td>
+                      <div class="table-progress">
+                        <div class="table-progress__bar table-progress__bar-fs" data-progress="30%">
+                          <span class="table-progress__text-fs">2</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">ЖК Капитал</span>
+                    </td>
+                    <td>
+                      <div class="table-progress table-progress_sec">
+                        <div class="table-progress__bar table-progress__bar-sec" data-progress="40%"></div>
+                        <span class="table-progress__text-sec">40%</span>
+                      </div>
+                    </td>
+                    <td class="table-popup__wrap">
+                      <div class="flex">
+                        <div class="table-progress table-progress_sec">
+                          <div class="table-progress__bar table-progress__bar-sec" data-progress="55%"></div>
+                          <span class="table-progress__text-sec">82/192</span>
+                        </div>
+                        <div class="table-progress__show">
+                          <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="table-popup flex-col">
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">8/180</span>
+                            </div>
+                            <span class="table-text__th">Студия</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">10/180</span>
+                            </div>
+                            <span class="table-text__th">1к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">3/180</span>
+                            </div>
+                            <span class="table-text__th">2к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">2/180</span>
+                            </div>
+                            <span class="table-text__th">3к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">25/180</span>
+                            </div>
+                            <span class="table-text__th">4к. кв</span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">189</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th text-center">4</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">1,3 -5,5</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">68 000</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="table-text__th">ЖК Красивый</span>
+                    </td>
+                    <td>
+                      <div class="table-progress">
+                        <div class="table-progress__bar table-progress__bar-fs" data-progress="16.6%">
+                          <span class="table-progress__text-fs">1</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">ЖК Красивый</span>
+                    </td>
+                    <td>
+                      <div class="table-progress table-progress_sec">
+                        <div class="table-progress__bar table-progress__bar-sec" data-progress="30%"></div>
+                        <span class="table-progress__text-sec">30%</span>
+                      </div>
+                    </td>
+                    <td class="table-popup__wrap">
+                      <div class="flex">
+                        <div class="table-progress table-progress_sec">
+                          <div class="table-progress__bar table-progress__bar-sec" data-progress="45%"></div>
+                          <span class="table-progress__text-sec">120/229</span>
+                        </div>
+                        <div class="table-progress__show">
+                          <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="table-popup flex-col">
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">8/180</span>
+                            </div>
+                            <span class="table-text__th">Студия</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">10/180</span>
+                            </div>
+                            <span class="table-text__th">1к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">3/180</span>
+                            </div>
+                            <span class="table-text__th">2к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">2/180</span>
+                            </div>
+                            <span class="table-text__th">3к. кв</span>
+                          </div>
+                          <div class="table-popup__item">
+                            <div class="table-progress table-progress_sec">
+                              <div class="table-progress__bar table-progress__bar-sec" data-progress="35%"></div>
+                              <span class="table-progress__text-sec">25/180</span>
+                            </div>
+                            <span class="table-text__th">4к. кв</span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">67</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th text-center">3</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">1,4 -4,6</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">50 000</span>
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tfoot>
+              </table>
+
+
+            </div>
+
+            <div class="box_sec table-wrap_2">
+
+              <table class="table compact" id="table_2" width="100%">
+                <thead>
+                  <tr>
+                    <td class="table-title">
+                      <span class="table-text__fs">Результаты продаж</span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td width="130px">
+                      <span class="table-text__sec">Тип планировки</span>
+                    </td>
+                    <td width="160px">
+                      <span class="table-text__sec">Продано, шт</span>
+                    </td>
+                    <td>
+                      <span class="table-text__sec">Тип планировки</span>
+                    </td>
+                    <td>
+                      <span class="table-text__sec">Всего,<br>шт</span>
+                    </td>
+                    <td>
+                      <span class="table-text__sec">Продано,<br>шт</span>
+                    </td>
+                    <td>
+                      <span class="table-text__sec">Остаток,<br>шт</span>
+                    </td>
+                    <td>
+                      <span class="table-text__sec">Среднемесячное<br>число продаж</span>
+                    </td>
+                    <td>
+                      <span class="table-text__sec">Диапазон цен,<br>млн. руб.</span>
+                    </td>
+                    <td>
+                      <span class="table-text__sec">Средняя цена,<br>руб./м²</span>
+                    </td>
+                    <td>
+                      <span class="table-text__sec">Ожидаемый<br>срок выбытия</span>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="table-text__th">1,5 к.кв.</span>
+                    </td>
+                    <td>
+                      <div class="table-progress">
+                        <div class="table-progress__bar table-progress__bar-fs" data-progress="100%">
+                          <span class="table-progress__text-fs">15</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">1,5 к.кв.</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">100</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">90</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">10</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">20</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">1,9 - 2,4</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">60 000</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">янв. 2020</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="table-text__th">1 к.кв.</span>
+                    </td>
+                    <td>
+                      <div class="table-progress">
+                        <div class="table-progress__bar table-progress__bar-fs" data-progress="79%">
+                          <span class="table-progress__text-fs">13</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">1 к.кв.</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">150</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">80</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">70</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">18</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">1,8 - 2,2</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">70 000</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">фев. 2020</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="table-text__th">Студии</span>
+                    </td>
+                    <td>
+                      <div class="table-progress">
+                        <div class="table-progress__bar table-progress__bar-fs" data-progress="73%">
+                          <span class="table-progress__text-fs">11</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">Студии</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">200</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">70</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">130</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">17</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">1,3 - 1,8</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">68 000</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">март. 2020</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="table-text__th">2,5 к.кв.</span>
+                    </td>
+                    <td>
+                      <div class="table-progress">
+                        <div class="table-progress__bar table-progress__bar-fs" data-progress="66%">
+                          <span class="table-progress__text-fs">10</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">2,5 к.кв.</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">150</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">60</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">90</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">16</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">2,4 - 3,2</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">52 000</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">апр. 2020</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="table-text__th">3,5 к.кв.</span>
+                    </td>
+                    <td>
+                      <div class="table-progress">
+                        <div class="table-progress__bar table-progress__bar-fs" data-progress="59%">
+                          <span class="table-progress__text-fs">9</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">3,5 к.кв.</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">100</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">50</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">50</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">15</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">2,8 - 4,5</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">59 000</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">май. 2020</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="table-text__th">2 к.кв.</span>
+                    </td>
+                    <td>
+                      <div class="table-progress">
+                        <div class="table-progress__bar table-progress__bar-fs" data-progress="53%">
+                          <span class="table-progress__text-fs">8</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">2 к.кв.</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">100</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">40</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">60</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">14</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">2,2 - 2,8</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">50 000</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">сент. 2020</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="table-text__th">3 к.кв.</span>
+                    </td>
+                    <td>
+                      <div class="table-progress">
+                        <div class="table-progress__bar table-progress__bar-fs" data-progress="40%">
+                          <span class="table-progress__text-fs">6</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">3 к.кв.</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">70</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">30</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">40</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">13</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">3,2 - 5,7</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">50 000</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">нояб. 2020</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="table-text__th">Апартаменты</span>
+                    </td>
+                    <td>
+                      <div class="table-progress">
+                        <div class="table-progress__bar table-progress__bar-fs" data-progress="33%">
+                          <span class="table-progress__text-fs">5</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="table-text__th">Апартаменты</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">50</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">20</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">30</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">12</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">1,9 - 5,1</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">51 000</span>
+                    </td>
+                    <td>
+                      <span class="table-text__th">дек. 2020</span>
+                    </td>
+                  </tr>
+                  
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tfoot>
+              </table>
+
+
+            </div>
+
+
+          </div>
+
+          <div class="box">
+            <div class="box_fs relative box_fs_rounded">
+              <div class="flex space-between">
+
+                <div class="title__wrap flex align-center title-fs">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+                    <g>
+                      <g>
+                        <path fill="#6cb4af"
+                          d="M24.506 18.175a6.339 6.339 0 0 1-6.331 6.332 6.331 6.331 0 0 1-5.262-2.814H1.197a.704.704 0 0 1-.703-.704V2.65c0-.389.314-.704.703-.704h3.565v-.75a.703.703 0 0 1 1.407 0v.75h2.813v-.75a.703.703 0 0 1 1.407 0v.75h2.814v-.75a.703.703 0 0 1 1.408 0v.75h2.814v-.75a.703.703 0 0 1 1.407 0v.75h3.564c.388 0 .703.315.703.704V14.2a6.301 6.301 0 0 1 1.407 3.974zM1.901 3.355v2.814h19.791V3.355h-2.86v.703a.703.703 0 0 1-1.407 0v-.703H14.61v.703a.703.703 0 0 1-1.407 0v-.703h-2.815v.703a.703.703 0 0 1-1.407 0v-.703H6.17v.703a.703.703 0 0 1-1.407 0v-.703zm10.305 16.93a6.27 6.27 0 0 1-.323-1.407h-.743a.704.704 0 0 1 0-1.407h.743a6.28 6.28 0 0 1 .323-1.407H11.14a.703.703 0 1 1 0-1.407h1.407c.114 0 .221.028.316.076a6.331 6.331 0 0 1 5.312-2.89c1.3 0 2.51.395 3.517 1.07V7.575H1.901v12.71zm10.893-2.11a4.93 4.93 0 0 0-4.924-4.925 4.93 4.93 0 0 0-4.925 4.925 4.93 4.93 0 0 0 4.925 4.924 4.93 4.93 0 0 0 4.924-4.924zm-1.407 0a.704.704 0 0 1-.703.704h-2.814a.704.704 0 0 1-.704-.704V15.36a.703.703 0 0 1 1.407 0v2.11h2.11c.39 0 .704.315.704.704zM7.575 9.733a.703.703 0 0 1-.703.703H5.465a.703.703 0 0 1 0-1.407h1.407c.389 0 .703.315.703.704zm0 2.814a.703.703 0 0 1-.703.703H5.465a.703.703 0 0 1 0-1.406h1.407c.389 0 .703.314.703.703zm0 2.814a.703.703 0 0 1-.703.703H5.465a.703.703 0 1 1 0-1.407h1.407c.389 0 .703.315.703.704zm2.861-5.628c0-.389.315-.704.704-.704h1.407a.703.703 0 1 1 0 1.407H11.14a.703.703 0 0 1-.704-.703zm0 2.814c0-.389.315-.703.704-.703h1.407a.703.703 0 1 1 0 1.406H11.14a.703.703 0 0 1-.704-.703zm-2.86 5.628a.703.703 0 0 1-.704.704H5.465a.704.704 0 0 1 0-1.408h1.407c.389 0 .703.315.703.704zm8.488-8.442c0-.389.315-.704.704-.704h1.407a.703.703 0 0 1 0 1.407h-1.407a.703.703 0 0 1-.704-.703z" />
+                      </g>
+                    </g>
+                  </svg>
+                  <span class="title ">Динамика продажи квартир в течении календарного года</span>
+                </div>
+
+                <div class="flex">
+                  <button class="main-btn main-btn__sec main-btn__sec_active">Квартиры</button>
+                  <button class="main-btn main-btn__sec">Совокупная стоимость</button>
+                </div>
+
+
+              </div>
+
+              <div class="flex graph-status__wrap graph-status__wrap_1">
+                <div class="status graph-status status-1 flex">
+                  <div class="status-bar"></div>
+                  <span class="status-name">ЖК Молоко и Мёд / дом 1</span>
+                </div>
+                <div class="status graph-status status-2 flex">
+                  <div class="status-bar"></div>
+                  <span class="status-name">ЖК Молоко и Мёд / дом 2</span>
+                </div>
+                <div class="status graph-status status-3 flex">
+                  <div class="status-bar"></div>
+                  <span class="status-name">ЖК Облако / дом 1</span>
+                </div>
+                <div class="status graph-status status-4 flex">
+                  <div class="status-bar"></div>
+                  <span class="status-name">ЖК Облако / дом 2</span>
+                </div>
+
+              </div>
+
+              <div id="graph-wrap_1" id="graph-wrap_2" class="graph-wrap relative">
+                <div class="graph-text">
+                  <span class="graph-text__left">Продано квартир, в месяц</span>
+                  <svg id="SVGDoc" width="14" height="14" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 14 14">
+                    <defs></defs>
+                    <desc>Generated with Avocode.</desc>
+                    <g>
+                      <g opacity="0.5">
+                        <title>Layer 1430</title>
+                        <image
+                          xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAAb0lEQVQ4T+2TwQrAMAhD9b89+t8bFhQ3CiWZx/UiFHwYE1VExN0vM9Os8cc8zaavoOAs2PhkjKx3T8kchY3uLCcLV9kpKw4TJsxHo8eDlVg5+2HQCiE3T8GGYDujej4fMERTv5QEwqezk0rBTju7AYzcap86DjkUAAAAAElFTkSuQmCC"
+                          width="19" height="19" transform="matrix(1,0,0,1,0,-5)"></image>
+                      </g>
+                    </g>
+                  </svg>
+                  <span class="graph-text__bottom">Календарный месяц</span>
+                </div>
+                <canvas id="myChart_1"></canvas>
+
+                <!-- <img src="images/graph_1.png" alt="" class="graph-img"> -->
+              </div>
+              <div class="graph-slider__wrap">
+                <div class="graph-slider graph-slider_1"></div>
+                <div class="flex space-between graph-slider__text">
+                  <span class="graph-slider__title 2018">2018</span>
+                  <span class="graph-slider__title 2019">2019</span>
+                  <span class="graph-slider__title 2020" style="color: rgba(132, 132, 132, 0.5)">2020</span>
+                </div>
+              </div>
+
+              <button class="btn-more">Подробнее <i class="fa fa-chevron-down"></i></button>
+            </div>
+
+            <div class="box_sec box_sec_show box_sec_show_1 box_sec_hidden">
+              <div class="graph-table__wrap">
+                <table class="graph-table graph-table_1" width="100%">
+                  <thead>
+                    <tr>
+                      <td>
+                        <span class="table-text__sec">ЖК</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">Окт. 18</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">Нояб. 18</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">Дек. 18</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">Янв.19</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">Фев. 19</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">Март 19</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">Апр. 19</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">Май 19</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">Июнь 19</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">Июль 19</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">Авг.19</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">Сент. 19</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">Окт. 19</span>
+                      </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="color-tr" data-color="rgba(158, 241, 115,">
+                      <td>
+                        <span class="table-text__th">ЖК Молоко и мёд / дом 1</span>
+                      </td>
+                      <td class="color-td bgTable1-1-0" data-color-opacity="0.3">
+                        <span class="table-text__th">0</span>
+                      </td>
+                      <td class="color-td  bgTable1-1-0" data-color-opacity="0.3">
+                        <span class="table-text__th">0</span>
+                      </td>
+                      <td class="color-td bgTable1-1-2" data-color-opacity="0.4">
+                        <span class="table-text__th">2</span>
+                      </td>
+                      <td class="color-td bgTable1-1-6" data-color-opacity="0.6">
+                        <span class="table-text__th">6</span>
+                      </td>
+                      <td class="color-td bgTable1-1-3" data-color-opacity="0.4">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable1-1-6" data-color-opacity="0.8">
+                        <span class="table-text__th">6</span>
+                      </td>
+                      <td class="color-td bgTable1-1-5" data-color-opacity="0.7">
+                        <span class="table-text__th">5</span>
+                      </td>
+                      <td class="color-td bgTable1-1-8" data-color-opacity="0.9">
+                        <span class="table-text__th">8</span>
+                      </td>
+                      <td class="color-td bgTable1-1-4" data-color-opacity="0.6">
+                        <span class="table-text__th">4</span>
+                      </td>
+                      <td class="color-td bgTable1-1-3" data-color-opacity="0.5">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable1-1-4" data-color-opacity="0.6">
+                        <span class="table-text__th">4</span>
+                      </td>
+                      <td class="color-td bgTable1-1-1" data-color-opacity="0.4">
+                        <span class="table-text__th">1</span>
+                      </td>
+                      <td class="color-td bgTable1-1-0" data-color-opacity="0.3">
+                        <span class="table-text__th">0</span>
+                      </td>
+                    </tr>
+                    <tr class="color-tr" data-color="rgba(245, 197, 89,">
+                      <td>
+                        <span class="table-text__th">Молоко и мёд / дом 2</span>
+                      </td>
+                      <td class="color-td bgTable1-2-0" data-color-opacity="0.3">
+                        <span class="table-text__th">0</span>
+                      </td>
+                      <td class="color-td bgTable1-2-0" data-color-opacity="0.3">
+                        <span class="table-text__th">0</span>
+                      </td>
+                      <td class="color-td bgTable1-2-4" data-color-opacity="0.6">
+                        <span class="table-text__th">4</span>
+                      </td>
+                      <td class="color-td bgTable1-2-2" data-color-opacity="0.4">
+                        <span class="table-text__th">2</span>
+                      </td>
+                      <td class="color-td bgTable1-2-1" data-color-opacity="0.4">
+                        <span class="table-text__th">1</span>
+                      </td>
+                      <td class="color-td bgTable1-2-3" data-color-opacity="0.5">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable1-2-4" data-color-opacity="0.6">
+                        <span class="table-text__th">4</span>
+                      </td>
+                      <td class="color-td bgTable1-2-8" data-color-opacity="0.9">
+                        <span class="table-text__th">8</span>
+                      </td>
+                      <td class="color-td bgTable1-2-6" data-color-opacity="0.8">
+                        <span class="table-text__th">6</span>
+                      </td>
+                      <td class="color-td bgTable1-2-4" data-color-opacity="0.6">
+                        <span class="table-text__th">4</span>
+                      </td>
+                      <td class="color-td bgTable1-2-2" data-color-opacity="0.4">
+                        <span class="table-text__th">2</span>
+                      </td>
+                      <td class="color-td bgTable1-2-6" data-color-opacity="0.8">
+                        <span class="table-text__th">6</span>
+                      </td>
+                      <td class="color-td bgTable1-2-0" data-color-opacity="0.3">
+                        <span class="table-text__th">0</span>
+                      </td>
+                    </tr>
+                    <tr class="color-tr" data-color="rgba(83, 159, 237,">
+                      <td>
+                        <span class="table-text__th">ЖК Облака / дом 1</span>
+                      </td>
+                      <td class="color-td bgTable1-3-4" data-color-opacity="0.5">
+                        <span class="table-text__th">4</span>
+                      </td>
+                      <td class="color-td bgTable1-3-7" data-color-opacity="0.8">
+                        <span class="table-text__th">7</span>
+                      </td>
+                      <td class="color-td bgTable1-3-10" data-color-opacity="1">
+                        <span class="table-text__th">10</span>
+                      </td>
+                      <td class="color-td bgTable1-3-4" data-color-opacity="0.5">
+                        <span class="table-text__th">4</span>
+                      </td>
+                      <td class="color-td bgTable1-3-10" data-color-opacity="1">
+                        <span class="table-text__th">10</span>
+                      </td>
+                      <td class="color-td bgTable1-3-11" data-color-opacity="1">
+                        <span class="table-text__th">11</span>
+                      </td>
+                      <td class="color-td bgTable1-3-7" data-color-opacity="0.8">
+                        <span class="table-text__th">7</span>
+                      </td>
+                      <td class="color-td bgTable1-3-3" data-color-opacity="0.4">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable1-3-3" data-color-opacity="0.4">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable1-3-5" data-color-opacity="0.6">
+                        <span class="table-text__th">5</span>
+                      </td>
+                      <td class="color-td bgTable1-3-3" data-color-opacity="0.4">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable1-3-7" data-color-opacity="0.8">
+                        <span class="table-text__th">7</span>
+                      </td>
+                      <td class="color-td bgTable1-3-0" data-color-opacity="0.3">
+                        <span class="table-text__th">0</span>
+                      </td>
+                    </tr>
+                    <tr class="color-tr" data-color="rgba(228, 105, 155,">
+                      <td>
+                        <span class="table-text__th">ЖК Облака / дом 2</span>
+                      </td>
+                      <td class="color-td bgTable1-4-3" data-color-opacity="0.4">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable1-4-10" data-color-opacity="1">
+                        <span class="table-text__th">10</span>
+                      </td>
+                      <td class="color-td bgTable1-4-6" data-color-opacity="0.7">
+                        <span class="table-text__th">6</span>
+                      </td>
+                      <td class="color-td bgTable1-4-3" data-color-opacity="0.4">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable1-4-7" data-color-opacity="0.8">
+                        <span class="table-text__th">7</span>
+                      </td>
+                      <td class="color-td bgTable1-4-3" data-color-opacity="0.4">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable1-4-5" data-color-opacity="0.6">
+                        <span class="table-text__th">5</span>
+                      </td>
+                      <td class="color-td bgTable1-4-6" data-color-opacity="0.7">
+                        <span class="table-text__th">6</span>
+                      </td>
+                      <td class="color-td bgTable1-4-11" data-color-opacity="1">
+                        <span class="table-text__th">11</span>
+                      </td>
+                      <td class="color-td bgTable1-4-8" data-color-opacity="0.9">
+                        <span class="table-text__th">8</span>
+                      </td>
+                      <td class="color-td bgTable1-4-0" data-color-opacity="0.3">
+                        <span class="table-text__th">0</span>
+                      </td>
+                      <td class="color-td bgTable1-4-3" data-color-opacity="0.5">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable1-4-0" data-color-opacity="0.3">
+                        <span class="table-text__th">0</span>
+                      </td>
+                    </tr>
+                    <tr class="color-tr" data-color="rgba(107, 183, 178,">
+                      <td>
+                        <span class="table-text__th font-demi">В среднем</span>
+                      </td>
+                      <td class="color-td bgTable1-5-35" data-color-opacity="0.45">
+                        <span class="table-text__th">3,5</span>
+                      </td>
+                      <td class="color-td bgTable1-5-85" data-color-opacity="0.95">
+                        <span class="table-text__th">8,5</span>
+                      </td>
+                      <td class="color-td bgTable1-5-55" data-color-opacity="0.65">
+                        <span class="table-text__th">5,5</span>
+                      </td>
+                      <td class="color-td bgTable1-5-38" data-color-opacity="0.48">
+                        <span class="table-text__th">3,8</span>
+                      </td>
+                      <td class="color-td bgTable1-5-53" data-color-opacity="0.63">
+                        <span class="table-text__th">5,3</span>
+                      </td>
+                      <td class="color-td bgTable1-5-58" data-color-opacity="0.68">
+                        <span class="table-text__th">5,8</span>
+                      </td>
+                      <td class="color-td bgTable1-5-53" data-color-opacity="0.63">
+                        <span class="table-text__th">5,3</span>
+                      </td>
+                      <td class="color-td bgTable1-5-63" data-color-opacity="0.73">
+                        <span class="table-text__th">6,3</span>
+                      </td>
+                      <td class="color-td bgTable1-5-6" data-color-opacity="0.7">
+                        <span class="table-text__th">6,0</span>
+                      </td>
+                      <td class="color-td bgTable1-5-5" data-color-opacity="0.6">
+                        <span class="table-text__th">5,0</span>
+                      </td>
+                      <td class="color-td bgTable1-5-3" data-color-opacity="0.4">
+                        <span class="table-text__th">3,0</span>
+                      </td>
+                      <td class="color-td bgTable1-5-43" data-color-opacity="0.53">
+                        <span class="table-text__th">4,3</span>
+                      </td>
+                      <td class="color-td bgTable1-5-0" data-color-opacity="0.3">
+                        <span class="table-text__th">0</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="box_fs box_fs_rounded box_fs_rounded relative">
+              <div class="flex space-between">
+
+                <div class="title__wrap flex align-center title-fs">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24">
+                    <g>
+                      <g>
+                        <path fill="#6bb7b2"
+                          d="M3.566 12.447a.703.703 0 0 1 0-.995l5.627-5.626a.703.703 0 0 1 .994 0l2.316 2.316L19.245 1.4H18.13a.703.703 0 1 1 0-1.406h2.813a.75.75 0 0 1 .07.003c.01 0 .022.003.033.005l.034.005.04.01.026.006.042.015.023.008a.737.737 0 0 1 .041.02l.021.01.044.025.015.01a.746.746 0 0 1 .157.142.797.797 0 0 1 .04.055l.01.015a.646.646 0 0 1 .025.044l.01.02.02.042.008.023.014.041.007.027.01.04.005.034.005.033a.718.718 0 0 1 .003.07V3.51a.703.703 0 1 1-1.406 0V2.394L13 9.634a.703.703 0 0 1-.994 0L9.69 7.318l-5.13 5.13a.7.7 0 0 1-.994 0zM.5 22.312h7.033v.984A.703.703 0 0 1 6.83 24H1.203a.703.703 0 0 1-.703-.704zm7.033-2.391v.984H.5v-.984c0-.389.315-.704.703-.704H6.83c.389 0 .703.315.703.704zm1.454 2.39h7.033v.985a.703.703 0 0 1-.703.704H9.69a.703.703 0 0 1-.703-.704zm8.486-3.094h7.034v1.688h-7.034zm7.034-8.58v.985h-7.034v-.985c0-.389.315-.703.704-.703h5.626c.389 0 .704.314.704.703zm-7.034 2.391h7.034v1.688h-7.034zm0 3.095h7.034v1.688h-7.034zm0 6.189h7.034v.984a.703.703 0 0 1-.704.704h-5.626a.703.703 0 0 1-.704-.704zm-8.486-3.095h7.033v1.688H8.987zm7.033-2.391v.985H8.987v-.985c0-.389.314-.703.703-.703h5.627c.388 0 .703.314.703.703z" />
+                      </g>
+                    </g>
+                  </svg>
+                  <span class="title ">Динамика реализации квартир с момента старта продаж</span>
+                </div>
+
+                <div class="flex">
+                  <button class="main-btn main-btn__sec main-btn__sec_active">Квартиры</button>
+                  <button class="main-btn main-btn__sec">Совокупная стоимость</button>
+                </div>
+
+              </div>
+
+              <div class="flex graph-status__wrap">
+                <div class="status graph-status status-1 flex">
+                  <div class="status-bar"></div>
+                  <span class="status-name">ЖК Молоко и Мёд / дом 1</span>
+                </div>
+                <div class="status graph-status status-2 flex">
+                  <div class="status-bar"></div>
+                  <span class="status-name">ЖК Молоко и Мёд / дом 2</span>
+                </div>
+                <div class="status graph-status status-3 flex">
+                  <div class="status-bar"></div>
+                  <span class="status-name">ЖК Облако / дом 1</span>
+                </div>
+                <div class="status graph-status status-4 flex">
+                  <div class="status-bar"></div>
+                  <span class="status-name">ЖК Облако / дом 2</span>
+                </div>
+                <div class="graph-checkbox__wrap flex">
+                  <input class="graph-checkbox__input" type="checkbox" name="checkbox_1" id="checkbox_1">
+                  <label class="graph-checkbox__label" for="checkbox_1">
+                  </label>
+                  <span class="graph-checkbox__title">С накоплением</span>
+                </div>
+              </div>
+
+              <div id="graph-wrap_2" class="graph-wrap relative">
+                <div class="graph-text">
+                  <span class="graph-text__left">Продано квартир, в месяц</span>
+                  <svg id="SVGDoc" width="14" height="14" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 14 14">
+                    <defs></defs>
+                    <desc>Generated with Avocode.</desc>
+                    <g>
+                      <g opacity="0.5">
+                        <title>Layer 1430</title>
+                        <image
+                          xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAAb0lEQVQ4T+2TwQrAMAhD9b89+t8bFhQ3CiWZx/UiFHwYE1VExN0vM9Os8cc8zaavoOAs2PhkjKx3T8kchY3uLCcLV9kpKw4TJsxHo8eDlVg5+2HQCiE3T8GGYDujej4fMERTv5QEwqezk0rBTju7AYzcap86DjkUAAAAAElFTkSuQmCC"
+                          width="19" height="19" transform="matrix(1,0,0,1,0,-5)"></image>
+                      </g>
+                    </g>
+                  </svg>
+                  <span class="graph-text__bottom">Календарный месяц</span>
+                </div>
+                <canvas id="myChart_2"></canvas>
+
+                <!-- <img src="images/graph_1.png" alt="" class="graph-img"> -->
+              </div>
+              <div class="graph-slider__wrap">
+                <div class="graph-slider graph-slider_2"></div>
+                <div class="flex space-between graph-slider__text">
+                  <span class="graph-slider__title 2018">2018</span>
+                  <span class="graph-slider__title 2019">2019</span>
+                  <span class="graph-slider__title 2020" style="color: rgba(132, 132, 132, 0.5)">2020</span>
+                </div>
+              </div>
+
+              <button class="btn-more">Подробнее <i class="fa fa-chevron-down"></i></button>
+            </div>
+
+            <div class="box_sec box_sec_show box_sec_show_2 box_sec_hidden">
+              <div class="graph-table__wrap">
+                <table class="graph-table" width="100%">
+                  <thead>
+                    <tr>
+                      <td>
+                        <span class="table-text__sec">ЖК</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">1 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">2 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">3 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">4 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">5 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">6 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">7 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">8 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">9 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">10 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">11 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">12 мес.</span>
+                      </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="color-tr" data-color="rgba(163, 241, 111,">
+                      <td>
+                        <span class="table-text__th">ЖК Молоко и мёд / дом 1</span>
+                      </td>
+                      <td class="color-td bgTable2-1-6" data-color-opacity="0.6">
+                        <span class="table-text__th">6</span>
+                      </td>
+                      <td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable2-1-6" data-color-opacity="0.6">
+                        <span class="table-text__th">6</span>
+                      </td>
+                      <td class="color-td bgTable2-1-5" data-color-opacity="0.5">
+                        <span class="table-text__th">5</span>
+                      </td>
+                      <td class="color-td bgTable2-1-8" data-color-opacity="0.8">
+                        <span class="table-text__th">8</span>
+                      </td>
+                      <td class="color-td bgTable2-1-4" data-color-opacity="0.4">
+                        <span class="table-text__th">4</span>
+                      </td>
+                      <td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable2-1-4" data-color-opacity="0.4">
+                        <span class="table-text__th">4</span>
+                      </td>
+                      <td class="color-td bgTable2-1-1" data-color-opacity="0.1">
+                        <span class="table-text__th">1</span>
+                      </td>
+                      <td class="color-td bgTable2-1-00" data-color-opacity="0">
+                        <span class="table-text__th">—</span>
+                      </td>
+                      <td class="color-td bgTable2-1-00" data-color-opacity="0">
+                        <span class="table-text__th">—</span>
+                      </td>
+                      <td class="color-td bgTable2-1-00" data-color-opacity="0">
+                        <span class="table-text__th">—</span>
+                      </td>
+                    </tr>
+                    <tr class="color-tr" data-color="rgba(245, 189, 89,">
+                      <td>
+                        <span class="table-text__th">Молоко и мёд / дом 2</span>
+                      </td>
+                      <td class="color-td bgTable2-2-2" data-color-opacity="0.2">
+                        <span class="table-text__th">2</span>
+                      </td>
+                      <td class="color-td bgTable2-2-1" data-color-opacity="0.1">
+                        <span class="table-text__th">1</span>
+                      </td>
+                      <td class="color-td bgTable2-2-3" data-color-opacity="0.3">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable2-2-4" data-color-opacity="0.4">
+                        <span class="table-text__th">4</span>
+                      </td>
+                      <td class="color-td bgTable2-2-8" data-color-opacity="0.8">
+                        <span class="table-text__th">8</span>
+                      </td>
+                      <td class="color-td bgTable2-2-6" data-color-opacity="0.6">
+                        <span class="table-text__th">6</span>
+                      </td>
+                      <td class="color-td bgTable2-2-4" data-color-opacity="0.4">
+                        <span class="table-text__th">4</span>
+                      </td>
+                      <td class="color-td bgTable2-2-2" data-color-opacity="0.2">
+                        <span class="table-text__th">2</span>
+                      </td>
+                      <td class="color-td bgTable2-2-6" data-color-opacity="0.6">
+                        <span class="table-text__th">6</span>
+                      </td>
+                      <td class="color-td bgTable2-2-00" data-color-opacity="0">
+                        <span class="table-text__th">—</span>
+                      </td>
+                      <td class="color-td bgTable2-2-00" data-color-opacity="0">
+                        <span class="table-text__th">—</span>
+                      </td>
+                      <td class="color-td bgTable2-2-6" data-color-opacity="0.6">
+                        <span class="table-text__th">6</span>
+                      </td>
+                    </tr>
+                    <tr class="color-tr" data-color="rgba(84, 197, 238,">
+                      <td>
+                        <span class="table-text__th">ЖК Облака / дом 1</span>
+                      </td>
+                      <td class="color-td bgTable2-3-9" data-color-opacity="0.9">
+                        <span class="table-text__th">9</span>
+                      </td>
+                      <td class="color-td bgTable2-3-7" data-color-opacity="0.7">
+                        <span class="table-text__th">7</span>
+                      </td>
+                      <td class="color-td bgTable2-3-10" data-color-opacity="1">
+                        <span class="table-text__th">10</span>
+                      </td>
+                      <td class="color-td bgTable2-3-4" data-color-opacity="0.4">
+                        <span class="table-text__th">4</span>
+                      </td>
+                      <td class="color-td bgTable2-3-10" data-color-opacity="1">
+                        <span class="table-text__th">10</span>
+                      </td>
+                      <td class="color-td bgTable2-3-11" data-color-opacity="1">
+                        <span class="table-text__th">11</span>
+                      </td>
+                      <td class="color-td bgTable2-3-7" data-color-opacity="0.7">
+                        <span class="table-text__th">7</span>
+                      </td>
+                      <td class="color-td bgTable2-3-3" data-color-opacity="0.3">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable2-3-3" data-color-opacity="0.3">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable2-3-5" data-color-opacity="0.5">
+                        <span class="table-text__th">5</span>
+                      </td>
+                      <td class="color-td bgTable2-3-3" data-color-opacity="0.3">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable2-3-7" data-color-opacity="0.7">
+                        <span class="table-text__th">7</span>
+                      </td>
+                    </tr>
+                    <tr class="color-tr" data-color="rgba(226, 111, 161,">
+                      <td>
+                        <span class="table-text__th">ЖК Облака / дом 2</span>
+                      </td>
+                      <td class="color-td bgTable2-4-6" data-color-opacity="0.6">
+                        <span class="table-text__th">6</span>
+                      </td>
+                      <td class="color-td bgTable2-4-3" data-color-opacity="0.3">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable2-4-7" data-color-opacity="0.7">
+                        <span class="table-text__th">7</span>
+                      </td>
+                      <td class="color-td bgTable2-4-3" data-color-opacity="0.3">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable2-4-5" data-color-opacity="0.5">
+                        <span class="table-text__th">5</span>
+                      </td>
+                      <td class="color-td bgTable2-4-6" data-color-opacity="0.6">
+                        <span class="table-text__th">6</span>
+                      </td>
+                      <td class="color-td bgTable2-4-11" data-color-opacity="1">
+                        <span class="table-text__th">11</span>
+                      </td>
+                      <td class="color-td bgTable2-4-8" data-color-opacity="0.8">
+                        <span class="table-text__th">8</span>
+                      </td>
+                      <td class="color-td bgTable2-4-0" data-color-opacity="0.5">
+                        <span class="table-text__th">0</span>
+                      </td>
+                      <td class="color-td bgTable2-4-3" data-color-opacity="0.3">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable2-4-00" data-color-opacity="0.0">
+                        <span class="table-text__th">—</span>
+                      </td>
+                      <td class="color-td bgTable2-4-00" data-color-opacity="0.0">
+                        <span class="table-text__th">—</span>
+                      </td>
+                    </tr>
+                    <tr class="color-tr" data-color="rgba(107, 183, 178,">
+                      <td>
+                        <span class="table-text__th font-demi">В среднем</span>
+                      </td>
+                      <td class="color-td bgTable2-5-58" data-color-opacity="0.58">
+                        <span class="table-text__th">5,8</span>
+                      </td>
+                      <td class="color-td bgTable2-5-35" data-color-opacity="0.35">
+                        <span class="table-text__th">3,5</span>
+                      </td>
+                      <td class="color-td bgTable2-5-65" data-color-opacity="0.65">
+                        <span class="table-text__th">6,5</span>
+                      </td>
+                      <td class="color-td bgTable2-5-40" data-color-opacity="0.4">
+                        <span class="table-text__th">4,0</span>
+                      </td>
+                      <td class="color-td bgTable2-5-78" data-color-opacity="0.78">
+                        <span class="table-text__th">7,8</span>
+                      </td>
+                      <td class="color-td bgTable2-5-68" data-color-opacity="0.68">
+                        <span class="table-text__th">6,8</span>
+                      </td>
+                      <td class="color-td bgTable2-5-63" data-color-opacity="0.63">
+                        <span class="table-text__th">6,3</span>
+                      </td>
+                      <td class="color-td bgTable2-5-43" data-color-opacity="0.43">
+                        <span class="table-text__th">4,3</span>
+                      </td>
+                      <td class="color-td bgTable2-5-43" data-color-opacity="0.43">
+                        <span class="table-text__th">4,3</span>
+                      </td>
+                      <td class="color-td bgTable2-5-40" data-color-opacity="0.4">
+                        <span class="table-text__th">4,0</span>
+                      </td>
+                      <td class="color-td bgTable2-5-30" data-color-opacity="0.3">
+                        <span class="table-text__th">3,0</span>
+                      </td>
+                      <td class="color-td bgTable2-5-70" data-color-opacity="0.7">
+                        <span class="table-text__th">7,0</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="box_fs box_fs_rounded relative">
+              <div class="flex space-between">
+
+                <div class="title__wrap flex align-center title-fs w-100">
+                  <svg id="SVGDoc" width="26" height="26" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 26 26">
+                    <defs></defs>
+                    <desc>Generated with Avocode.</desc>
+                    <g>
+                      <g>
+                        <title>ico</title>
+                        <path
+                          d="M14.27484,23.73988h11.08017v1.60791h-24.71004v-1.60791h10.89775l-10.62509,-12.45323h3.75406v-10.63445h16.47295v10.63445h3.75538zM6.27972,12.89456h-1.87642l8.50548,9.96881l8.50548,-9.96881h-1.87744v-10.63418h-13.2571zM9.49618,12.08275l5.04166,-7.38322h1.78242l-5.04166,7.38322zM15.61346,8.07483c1.11819,0 1.96199,0.74871 1.96199,2.05655c0,1.31849 -0.8439,2.05681 -1.96199,2.05681c-1.11789,0 -1.96169,-0.73832 -1.96169,-2.05681c0,-1.30784 0.8438,-2.05655 1.96169,-2.05655zM15.61356,9.21387c-0.23191,0 -0.46402,0.21087 -0.46402,0.91751c0,0.7069 0.23211,0.91778 0.46402,0.91778c0.23201,0 0.46413,-0.21087 0.46413,-0.91778c0,-0.70664 -0.23211,-0.91751 -0.46413,-0.91751zM8.241,6.65064c0,-1.30757 0.8438,-2.05655 1.96179,-2.05655c1.11799,0 1.96179,0.74897 1.96179,2.05655c0,1.31849 -0.8438,2.05681 -1.96179,2.05681c-1.11799,0 -1.96169,-0.73832 -1.96179,-2.05681zM9.73877,6.6509c0,0.70664 0.23201,0.91751 0.46402,0.91751c0.23211,0 0.46413,-0.21087 0.46413,-0.91751c0,-0.70664 -0.23201,-0.91778 -0.46413,-0.91778c-0.23201,0 -0.46402,0.21114 -0.46402,0.91778z"
+                          fill="#6bb7b2" fill-opacity="1"></path>
+                      </g>
+                    </g>
+                  </svg>
+                  <span class="title ">Изменение средней стоимости кв. м. квартир с момента старта продаж</span>
+                  <div class="graph-checkbox__wrap flex">
+                    <span class="graph-checkbox__title-sec">%</span>
+                    <input class="graph-checkbox__input" type="checkbox" name="checkbox_2" id="checkbox_2">
+                    <label class="graph-checkbox__label" for="checkbox_2">
+                    </label>
+                    <span class="graph-checkbox__title">тыс. руб.</span>
+                  </div>
+                </div>
+
+                <div class="flex">
+                </div>
+
+              </div>
+
+              <div class="flex graph-status__wrap graph-status__wrap_3">
+                <div class="status graph-status status-1 flex">
+                  <div class="status-bar"></div>
+                  <span class="status-name">ЖК Молоко и Мёд / дом 1</span>
+                </div>
+                <div class="status graph-status status-2 flex">
+                  <div class="status-bar"></div>
+                  <span class="status-name">ЖК Молоко и Мёд / дом 2</span>
+                </div>
+                <div class="status graph-status status-3 flex">
+                  <div class="status-bar"></div>
+                  <span class="status-name">ЖК Облако / дом 1</span>
+                </div>
+                <div class="status graph-status status-4 flex">
+                  <div class="status-bar"></div>
+                  <span class="status-name">ЖК Облако / дом 2</span>
+                </div>
+              </div>
+
+              <div id="graph-wrap_3" class="graph-wrap relative">
+                <div class="graph-text">
+                  <span class="graph-text__left">Продано квартир, в месяц</span>
+                  <svg id="SVGDoc" width="14" height="14" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 14 14">
+                    <defs></defs>
+                    <desc>Generated with Avocode.</desc>
+                    <g>
+                      <g opacity="0.5">
+                        <title>Layer 1430</title>
+                        <image
+                          xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAAb0lEQVQ4T+2TwQrAMAhD9b89+t8bFhQ3CiWZx/UiFHwYE1VExN0vM9Os8cc8zaavoOAs2PhkjKx3T8kchY3uLCcLV9kpKw4TJsxHo8eDlVg5+2HQCiE3T8GGYDujej4fMERTv5QEwqezk0rBTju7AYzcap86DjkUAAAAAElFTkSuQmCC"
+                          width="19" height="19" transform="matrix(1,0,0,1,0,-5)"></image>
+                      </g>
+                    </g>
+                  </svg>
+                  <span class="graph-text__bottom">Календарный месяц</span>
+                </div>
+                <canvas id="myChart_3"></canvas>
+
+                <!-- <img src="images/graph_1.png" alt="" class="graph-img"> -->
+              </div>
+              <div class="graph-slider__wrap">
+                <div class="graph-slider graph-slider_3"></div>
+                <div class="flex space-between graph-slider__text">
+                  <span class="graph-slider__title 2018">2018</span>
+                  <span class="graph-slider__title 2019">2019</span>
+                  <span class="graph-slider__title 2020" style="color: rgba(132, 132, 132, 0.5)">2020</span>
+                </div>
+              </div>
+             
+              <button class="btn-more">Подробнее
+                <i class="fa fa-chevron-down"></i></button>
+            </div>
+
+            <div class="box_sec box_sec_show box_sec_show_3 box_sec_hidden">
+              <div class="graph-table__wrap">
+                <table class="graph-table" width="100%">
+                  <thead>
+                    <tr>
+                      <td>
+                        <span class="table-text__sec">ЖК</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">1 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">2 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">3 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">4 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">5 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">6 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">7 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">8 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">9 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">10 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">11 мес.</span>
+                      </td>
+                      <td>
+                        <span class="table-text__sec">12 мес.</span>
+                      </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="color-tr" data-color="rgba(163, 241, 111,">
+                      <td>
+                        <span class="table-text__th">ЖК Молоко и мёд / дом 1</span>
+                      </td>
+                      <td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+                        <span class="table-text__th">0</span>
+                      </td>
+                      <td class="color-td bgTable2-1-3" data-color-opacity="0.4">
+                        <span class="table-text__th">-0.5</span>
+                      </td>
+                      <td class="color-td bgTable2-1-6" data-color-opacity="0.6">
+                        <span class="table-text__th">0</span>
+                      </td>
+                      <td class="color-td bgTable2-1-5" data-color-opacity="0.5">
+                        <span class="table-text__th">-0.2</span>
+                      </td>
+                      <td class="color-td bgTable2-1-8" data-color-opacity="0.8">
+                        <span class="table-text__th">0.3</span>
+                      </td>
+                      <td class="color-td bgTable2-1-4" data-color-opacity="0.4">
+                        <span class="table-text__th">-0.4</span>
+                      </td>
+                      <td class="color-td bgTable2-1-3" data-color-opacity="0.3">
+                        <span class="table-text__th">-0.55</span>
+                      </td>
+                      <td class="color-td bgTable2-1-4" data-color-opacity="0.4">
+                        <span class="table-text__th">-0.35</span>
+                      </td>
+                      <td class="color-td bgTable2-1-1" data-color-opacity="0.1">
+                        <span class="table-text__th">-0.8</span>
+                      </td>
+                      <td class="color-td bgTable2-1-00" data-color-opacity="0">
+                        <span class="table-text__th">—</span>
+                      </td>
+                      <td class="color-td bgTable2-1-00" data-color-opacity="0">
+                        <span class="table-text__th">—</span>
+                      </td>
+                      <td class="color-td bgTable2-1-00" data-color-opacity="0">
+                        <span class="table-text__th">—</span>
+                      </td>
+                    </tr>
+                    <tr class="color-tr" data-color="rgba(245, 189, 89,">
+                      <td>
+                        <span class="table-text__th">Молоко и мёд / дом 2</span>
+                      </td>
+                      <td class="color-td bgTable2-2-2" data-color-opacity="0.2">
+                        <span class="table-text__th">0</span>
+                      </td>
+                      <td class="color-td bgTable2-2-1" data-color-opacity="0.1">
+                        <span class="table-text__th">-0.85</span>
+                      </td>
+                      <td class="color-td bgTable2-2-3" data-color-opacity="0.3">
+                        <span class="table-text__th">-0.5</span>
+                      </td>
+                      <td class="color-td bgTable2-2-4" data-color-opacity="0.4">
+                        <span class="table-text__th">-0.38</span>
+                      </td>
+                      <td class="color-td bgTable2-2-8" data-color-opacity="0.8">
+                        <span class="table-text__th">-0.32</span>
+                      </td>
+                      <td class="color-td bgTable2-2-6" data-color-opacity="0.6">
+                        <span class="table-text__th">0</span>
+                      </td>
+                      <td class="color-td bgTable2-2-4" data-color-opacity="0.4">
+                        <span class="table-text__th">0.38</span>
+                      </td>
+                      <td class="color-td bgTable2-2-2" data-color-opacity="0.2">
+                        <span class="table-text__th">0.65</span>
+                      </td>
+                      <td class="color-td bgTable2-2-6" data-color-opacity="0.6">
+                        <span class="table-text__th">0</span>
+                      </td>
+                      <td class="color-td bgTable2-2-00" data-color-opacity="0">
+                        <span class="table-text__th">—</span>
+                      </td>
+                      <td class="color-td bgTable2-2-00" data-color-opacity="0">
+                        <span class="table-text__th">—</span>
+                      </td>
+                      <td class="color-td bgTable2-2-00" data-color-opacity="0">
+                        <span class="table-text__th">—</span>
+                      </td>
+                    </tr>
+                    <tr class="color-tr" data-color="rgba(84, 197, 238,">
+                      <td>
+                        <span class="table-text__th">ЖК Облака / дом 1</span>
+                      </td>
+                      <td class="color-td bgTable2-3-9" data-color-opacity="0.9">
+                        <span class="table-text__th">0</span>
+                      </td>
+                      <td class="color-td bgTable2-3-7" data-color-opacity="0.7">
+                        <span class="table-text__th">7</span>
+                      </td>
+                      <td class="color-td bgTable2-3-10" data-color-opacity="1">
+                        <span class="table-text__th">10</span>
+                      </td>
+                      <td class="color-td bgTable2-3-4" data-color-opacity="0.4">
+                        <span class="table-text__th">4</span>
+                      </td>
+                      <td class="color-td bgTable2-3-10" data-color-opacity="1">
+                        <span class="table-text__th">10</span>
+                      </td>
+                      <td class="color-td bgTable2-3-11" data-color-opacity="1">
+                        <span class="table-text__th">11</span>
+                      </td>
+                      <td class="color-td bgTable2-3-7" data-color-opacity="0.7">
+                        <span class="table-text__th">7</span>
+                      </td>
+                      <td class="color-td bgTable2-3-3" data-color-opacity="0.3">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable2-3-3" data-color-opacity="0.3">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable2-3-5" data-color-opacity="0.5">
+                        <span class="table-text__th">5</span>
+                      </td>
+                      <td class="color-td bgTable2-3-3" data-color-opacity="0.3">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable2-3-7" data-color-opacity="0.7">
+                        <span class="table-text__th">7</span>
+                      </td>
+                    </tr>
+                    <tr class="color-tr" data-color="rgba(226, 111, 161,">
+                      <td>
+                        <span class="table-text__th">ЖК Облака / дом 2</span>
+                      </td>
+                      <td class="color-td bgTable2-4-6" data-color-opacity="0.6">
+                        <span class="table-text__th">0</span>
+                      </td>
+                      <td class="color-td bgTable2-4-3" data-color-opacity="0.5">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable2-4-7" data-color-opacity="0.5">
+                        <span class="table-text__th">7</span>
+                      </td>
+                      <td class="color-td bgTable2-4-3" data-color-opacity="0.3">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable2-4-5" data-color-opacity="0.5">
+                        <span class="table-text__th">5</span>
+                      </td>
+                      <td class="color-td bgTable2-4-6" data-color-opacity="0.6">
+                        <span class="table-text__th">0</span>
+                      </td>
+                      <td class="color-td bgTable2-4-11" data-color-opacity="1">
+                        <span class="table-text__th">11</span>
+                      </td>
+                      <td class="color-td bgTable2-4-8" data-color-opacity="0.8">
+                        <span class="table-text__th">8</span>
+                      </td>
+                      <td class="color-td bgTable2-4-0" data-color-opacity="0.5">
+                        <span class="table-text__th">0</span>
+                      </td>
+                      <td class="color-td bgTable2-4-3" data-color-opacity="0.3">
+                        <span class="table-text__th">3</span>
+                      </td>
+                      <td class="color-td bgTable2-4-00" data-color-opacity="0.0">
+                        <span class="table-text__th">—</span>
+                      </td>
+                      <td class="color-td bgTable2-4-00" data-color-opacity="0.0">
+                        <span class="table-text__th">—</span>
+                      </td>
+                    </tr>
+                    <tr class="color-tr" data-color="rgba(107, 183, 178,">
+                      <td>
+                        <span class="table-text__th font-demi">В среднем</span>
+                      </td>
+                      <td class="color-td bgTable2-5-58" data-color-opacity="0.58">
+                        <span class="table-text__th">0</span>
+                      </td>
+                      <td class="color-td bgTable2-5-35" data-color-opacity="0.35">
+                        <span class="table-text__th">3,5</span>
+                      </td>
+                      <td class="color-td bgTable2-5-65" data-color-opacity="0.65">
+                        <span class="table-text__th">6,5</span>
+                      </td>
+                      <td class="color-td bgTable2-5-40" data-color-opacity="0.4">
+                        <span class="table-text__th">4,0</span>
+                      </td>
+                      <td class="color-td bgTable2-5-78" data-color-opacity="0.78">
+                        <span class="table-text__th">7,8</span>
+                      </td>
+                      <td class="color-td bgTable2-5-68" data-color-opacity="0.68">
+                        <span class="table-text__th">6,8</span>
+                      </td>
+                      <td class="color-td bgTable2-5-63" data-color-opacity="0.63">
+                        <span class="table-text__th">6,3</span>
+                      </td>
+                      <td class="color-td bgTable2-5-43" data-color-opacity="0.43">
+                        <span class="table-text__th">4,3</span>
+                      </td>
+                      <td class="color-td bgTable2-5-43" data-color-opacity="0.43">
+                        <span class="table-text__th">4,3</span>
+                      </td>
+                      <td class="color-td bgTable2-5-40" data-color-opacity="0.4">
+                        <span class="table-text__th">4,0</span>
+                      </td>
+                      <td class="color-td bgTable2-5-30" data-color-opacity="0.3">
+                        <span class="table-text__th">3,0</span>
+                      </td>
+                      <td class="color-td bgTable2-5-70" data-color-opacity="0.7">
+                        <span class="table-text__th">7,0</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="box_fs box_single relative">
+              <div class="flex-col space-between">
+
+                <div class="title__wrap flex align-center title-fs">
+                  <svg id="SVGDoc" width="28" height="25" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 28 25">
+                    <defs></defs>
+                    <desc>Generated with Avocode.</desc>
+                    <g>
+                      <g>
+                        <title>ico</title>
+                        <path
+                          d="M12.39354,8.26442c-0.8625,-0.50375 -1.15325,-1.6111 -0.64949,-2.4735c0.50356,-0.86266 1.61118,-1.15341 2.47357,-0.64966c0.56341,-0.32909 1.26026,-0.32909 1.82337,0c0.8626,0.50349 1.15386,1.61084 0.6503,2.4735c-0.50356,0.8624 -1.61097,1.15368 -2.47368,0.65019c-0.27439,0.16028 -0.58628,0.24522 -0.90417,0.24628c-0.32327,0.00133 -0.64075,-0.08387 -0.91992,-0.24682zM14.89323,5.82713c0.01758,0.03009 0.03018,0.06284 0.04512,0.09346c0.01098,0.02183 0.02165,0.0442 0.03161,0.0671c0.04268,0.09878 0.07602,0.20129 0.1,0.30646c0.00498,0.02103 0.00803,0.04287 0.0126,0.06417c0.04868,0.22738 0.04868,0.46248 0,0.68986c-0.00417,0.02077 -0.00722,0.0418 -0.01179,0.0623c-0.02459,0.1065 -0.05874,0.21034 -0.10224,0.31072c-0.00854,0.02024 -0.01839,0.03941 -0.02754,0.05937c-0.01443,0.03248 -0.02754,0.0663 -0.04512,0.09798c0.07388,0.0189 0.1499,0.02876 0.22602,0.02849c0.49939,0 0.90427,-0.40497 0.90427,-0.90446c0,-0.49923 -0.40488,-0.9042 -0.90427,-0.9042c-0.07724,-0.00027 -0.15396,0.00905 -0.22866,0.02876zM12.40919,6.70258c0,0.49976 0.40488,0.90446 0.90427,0.90446c0.22205,0 0.43628,-0.08227 0.60081,-0.23164c0.02541,-0.02237 0.0497,-0.04633 0.07246,-0.07162c0.33211,-0.36876 0.30254,-0.93668 -0.06606,-1.2687c-0.16596,-0.1515 -0.38242,-0.2359 -0.60721,-0.2367c-0.49939,0 -0.90427,0.40497 -0.90427,0.9042zM2.46255,8.05914v-2.7126c0,-0.25001 0.20244,-0.45237 0.45224,-0.45237h4.52113c0.24959,0 0.45203,0.20235 0.45203,0.45237v2.7126c0,0.24948 -0.20224,0.4521 -0.45203,0.4521h-4.52113c-0.2498,0 -0.45224,-0.20262 -0.45224,-0.4521zM6.98389,7.60677v-0.45183h-0.90437v0.45183zM6.98389,5.79838h-2.26067v0.45237h2.26067zM3.36682,7.60677h1.80843v-0.45183h-0.90427c-0.24959,0 -0.45193,-0.20235 -0.45193,-0.45237v-0.9042h-0.45224zM2.46255,10.31964h8.1382v0.90446h-8.1382zM5.17525,12.1283h5.4255v0.9042h-5.4255zM27.78123,13.0325v5.42519c0,0.24975 -0.20244,0.45237 -0.45224,0.45237h-1.3562v4.97336c0,0.24948 -0.20244,0.45183 -0.45224,0.45183h-24.41441c-0.24959,0 -0.45203,-0.20235 -0.45203,-0.45183v-5.42572c0,-0.24948 0.20244,-0.45183 0.45203,-0.45183h1.3564v-3.16496h-0.45193c-0.74929,0 -1.3565,-0.60733 -1.3565,-1.35656v-9.04198c0,-0.74924 0.60721,-1.35656 1.3565,-1.35656h1.3562v-1.3563c0,-0.74924 0.60721,-1.3563 1.3564,-1.3563h15.37204c0.74898,0 1.3562,0.60706 1.3562,1.3563v9.04225c0,0.74924 -0.60721,1.35656 -1.3562,1.35656h-1.3565v0.45183h8.59044c0.24959,0 0.45203,0.20262 0.45203,0.45237zM18.2853,18.00585v-3.51082c-0.02602,0.0237 -0.0561,0.04154 -0.08445,0.06337c-0.02856,0.02183 -0.05569,0.0442 -0.08547,0.06417c-0.04278,0.02636 -0.08709,0.05032 -0.13242,0.07189c-0.02937,0.01438 -0.05833,0.03195 -0.09045,0.04526c-0.05274,0.02024 -0.10681,0.03701 -0.16189,0.05006c-0.02856,0.00772 -0.05518,0.01864 -0.08465,0.0245c-0.08669,0.01731 -0.175,0.02609 -0.26341,0.02663h-5.4255v3.16496zM17.38256,21.62265h7.68597v-0.9042h-7.68597zM18.73876,4.44235v1.35603h1.80864v-1.8084h-1.89177c0.05356,0.14484 0.08171,0.29794 0.08313,0.45237zM19.19099,16.19719h7.68597v-0.9042h-7.68597zM26.87696,13.48433h-7.68597v0.9042h7.68597zM20.54719,10.77173v-4.06916h-1.80843v4.52152h1.3565c0.24959,0 0.45213,-0.20262 0.45193,-0.45237zM4.27099,3.08578h16.2762v-1.3563c0,-0.24975 -0.20234,-0.4521 -0.45193,-0.4521h-15.37204c-0.2498,0 -0.45224,0.20235 -0.45224,0.4521zM2.01062,13.9367h15.37194c0.24959,0 0.45203,-0.20235 0.45203,-0.45237v-9.04198c0,-0.25001 -0.20244,-0.45237 -0.45203,-0.45237h-15.37194c-0.2498,0 -0.45224,0.20235 -0.45224,0.45237v9.04198c0,0.25001 0.20244,0.45237 0.45224,0.45237zM3.36682,14.84089v1.3563h7.68597v-1.3563zM3.36682,18.00585h7.68597v-0.9042h-7.68597zM9.24436,20.71845h-7.68597v0.9042h7.68597zM1.55839,19.81425h7.68597v-0.9042h-7.68597zM1.55839,23.43105h7.68597v-0.9042h-7.68597zM10.14862,23.43105h6.32967v-4.52099h-6.32967zM25.06853,22.52685h-7.68597v0.9042h7.68597zM25.06853,18.91005h-7.68597v0.9042h7.68597zM26.87696,17.10166h-7.68597v0.9042h7.68597z"
+                          fill="#6bb7b2" fill-opacity="1"></path>
+                      </g>
+                    </g>
+                  </svg>
+                  <span class="title ">Формы оплаты приобретаемого жилья</span>
+                </div>
+
+                <div class="flex graph-table__wrap graph-table__wrap_4">
+                  <table class="graph-table" width="100%">
+                    <thead>
+                      <tr>
+                        <td width="17%">
+                          <span class="table-text__sec">ЖК</span>
+                        </td>
+                        <td width="16%">
+                          <span class="table-text__sec">Продано кв.</span>
+                        </td>
+                        <td width="67%">
+                          <div class="flex w-100 justify-end">
+                            <div class="status status-green flex">
+                              <div class="status-bar"></div>
+                              <span class="status-name">Сделки без ипотеки</span>
+                            </div>
+                            <div class="status status-yellow flex">
+                              <div class="status-bar"></div>
+                              <span class="status-name">Ипотека</span>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span class="table-text__th">ЖК Молоко и мёд / дом 1</span>
+                        </td>
+                        <td>
+                          <span class="table-text__th font-demi">51</span>
+                        </td>
+                        <td>
+                          <div class="table-bottom__progress">
+                            <div class="table-progress__start relative" data-progress="16%">16%
+                              <div class="table-bottom__popup table-bottom__popup-fs flex-col">
+                                <span class="table-bottom__popup-title table-text__th font-demi">Сделки без
+                                  ипотеки</span>
+                                <div class="table-bottom__popup-count"><span>8 шт</span> / <span>16%</span></div>
+                              </div>
+                            </div>
+                            <div class="table-progress__end relative" data-progress="84%">84%
+                              <div class="table-bottom__popup table-bottom__popup-sec flex-col">
+                                <span class="table-bottom__popup-title table-text__th font-demi">Ипотечные сделки</span>
+                                <div class="table-bottom__popup-count"><span>43 шт</span> / <span>84%</span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="table-text__th">Молоко и мёд / дом 2</span>
+                        </td>
+                        <td>
+                          <span class="table-text__th font-demi">50</span>
+                        </td>
+                        <td>
+                          <div class="table-bottom__progress">
+                            <div class="table-progress__start relative" data-progress="20%">20%
+                              <div class="table-bottom__popup table-bottom__popup-fs flex-col">
+                                <span class="table-bottom__popup-title table-text__th font-demi">Сделки без
+                                  ипотеки</span>
+                                <div class="table-bottom__popup-count"><span>8 шт</span> / <span>20%</span></div>
+                              </div>
+                            </div>
+                            <div class="table-progress__end relative" data-progress="80%">80%
+                              <div class="table-bottom__popup table-bottom__popup-sec flex-col">
+                                <span class="table-bottom__popup-title table-text__th font-demi">Ипотечные сделки</span>
+                                <div class="table-bottom__popup-count"><span>43 шт</span> / <span>80%</span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="table-text__th">ЖК Облака / дом 1</span>
+                        </td>
+                        <td>
+                          <span class="table-text__th font-demi">94</span>
+                        </td>
+                        <td>
+                          <div class="table-bottom__progress">
+                            <div class="table-progress__start relative" data-progress="36%">36%
+                              <div class="table-bottom__popup table-bottom__popup-fs flex-col">
+                                <span class="table-bottom__popup-title table-text__th font-demi">Сделки без
+                                  ипотеки</span>
+                                <div class="table-bottom__popup-count"><span>8 шт</span> / <span>36%</span></div>
+                              </div>
+                            </div>
+                            <div class="table-progress__end relative" data-progress="64%">64%
+                              <div class="table-bottom__popup table-bottom__popup-sec flex-col">
+                                <span class="table-bottom__popup-title table-text__th font-demi">Ипотечные сделки</span>
+                                <div class="table-bottom__popup-count"><span>43 шт</span> / <span>64%</span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="table-text__th">ЖК Облака / дом 2</span>
+                        </td>
+                        <td>
+                          <span class="table-text__th font-demi">90</span>
+                        </td>
+                        <td>
+                          <div class="table-bottom__progress">
+                            <div class="table-progress__start relative" data-progress="40%">40%
+                              <div class="table-bottom__popup table-bottom__popup-fs flex-col">
+                                <span class="table-bottom__popup-title table-text__th font-demi">Сделки без
+                                  ипотеки</span>
+                                <div class="table-bottom__popup-count"><span>8 шт</span> / <span>40%</span></div>
+                              </div>
+                            </div>
+                            <div class="table-progress__end relative" data-progress="60%">60%
+                              <div class="table-bottom__popup table-bottom__popup-sec flex-col">
+                                <span class="table-bottom__popup-title table-text__th font-demi">Ипотечные сделки</span>
+                                <div class="table-bottom__popup-count"><span>43 шт</span> / <span>60%</span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+              </div>
+
+
+              
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+  <script src="js/tooltipster.bundle.min.js"></script>
+
+  <script src="https://atuin.ru/demo/ui-slider/jquery-ui.min.js"></script>
+  <script src="https://atuin.ru/demo/ui-slider/jquery.ui.touch-punch.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+  <script src="js/ion.rangeSlider.min.js"></script>
+
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+  <!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
+
+
+  <script src="js/graph.js"></script>
+  <script src="js/scripts.js"></script>
+  <!-- <script src="js/new.js"></script> -->
+
+
+  <script>
+
+  </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,350 @@
+.dev
+  &-content 
+    padding-bottom: 57px
+  &-container
+    max-width: 1063px
+  &-box
+    // box-shadow: 3px 3px 95px rgba(117, 141, 139, 0.25)
+    box-shadow: none
+    margin-top: 44px
+    background: none
+    &_fs
+      &_1
+        padding-top: 37px
+        padding-left: 34px
+        padding-right: 34px
+        box-shadow: inset 0px -20px 20px -20px rgba(117, 141, 139, 0.15) 
+      &_2
+        background: #FFFFFF
+        box-shadow: 3px 3px 95px rgba(117, 141, 139, 0.25)
+        border-radius: 10px
+        padding-top: 24px
+        padding-left: 34px
+        padding-bottom: 44px
+        padding-right: 34px
+    &_sec
+      &_1
+        min-height: 106px
+        padding-top: 29px
+        padding-bottom: 31px
+        padding-left: 34px
+        background: linear-gradient(90deg, #FDF0F9 0%, #FAECF9 33.33%, #E4F2FB 100%)
+
+    &_shadow
+      box-shadow: 3px 3px 95px rgba(117, 141, 139, 0.25)
+  &-search
+    &-search
+      &__select
+        margin-left: 0 !important
+        margin-right: 16px
+  &-clndr
+    &-result
+      &__space
+        padding-left: 8px
+        padding-right: 8px
+  &-openClndr
+    display: flex
+    align-items: center
+    margin-left: 12px
+  &-clear-filter
+    margin-right: 21px
+  &-filter
+    &-item
+      min-height: 44px 
+      &_1
+        margin-left: 110px
+        margin-right: 82px
+        width: 107px
+      &_2
+        width: 177px
+        margin-right: 137px
+    &-title
+      font-size: 14px
+      line-height: 22px
+      // font-family: FuturaPTMedium
+      font-family: FuturaPTDemi
+      color: #2C3942
+    &-value
+      font-size: 14px
+      line-height: 22px
+      color: #2C3942
+  &-circle
+    padding-top: 33px
+    &__wrap
+      padding: 28px 35px
+      margin-right: 8px
+      width: 401px
+      height: 427px
+      background: #FFFFFF
+      border-radius: 10px
+      box-shadow: 3px 3px 95px rgba(117, 141, 139, 0.25)
+    &__title
+      font-family: FuturaPTMedium
+      font-size: 20px
+      line-height: 24px
+      // letter-spacing: 0.02em
+      color: #2C3942
+      margin-bottom: 18px
+    &__subtitle
+      font-size: 16px
+      line-height: 19px
+      color: #2C3942
+  &-tabs
+    &__wrap
+      height: 427px
+      width: calc(100% - 401px)
+    &__item
+      height: 52px
+      padding: 30px 20px
+      background: #f5f6f6
+      border-radius: 10px 10px 0 0
+      box-shadow: 0px -20px 95px rgba(117, 141, 139, 0.25)
+      cursor: pointer
+      & svg
+        opacity: 0.2
+      &s
+        // background: #dfe4e8
+        width: auto
+      &_1
+        padding-top: 18px
+        padding-left: 28px
+        padding-bottom: 11px
+        padding-right: 55px
+        margin-right: -20px
+      &_1.dev-tabs_active
+        padding-right: 35px
+        margin-right: 0px
+        & .dev-tabs__title
+          opacity: 1
+      &_2
+        padding-top: 16px
+        padding-left: 51px
+        padding-bottom: 11px
+        padding-right: 28px
+        margin-left: -20px
+        z-index: 0
+      &_2.dev-tabs_active
+        margin-left: 0px
+        padding-left: 31px
+        & .dev-tabs__title
+          opacity: 1
+    &__title
+      display: block
+      font-family: FuturaPTMedium
+      font-weight: 500
+      font-size: 16px
+      line-height: 19px
+      color: #2C3942
+      padding-left: 14px
+      opacity: 0.4
+    &_active
+      z-index: 5
+      background: #FFFFFF
+      // box-shadow: 3px 3px 95px rgba(117, 141, 139, 0.25)
+      border-radius: 10px 10px 0 0    
+      & svg, & path
+        opacity: 1
+        fill: rgb(108, 183, 178)
+    &-content
+      height: 0px
+      overflow: hidden
+      &_active
+        height: 293px
+      &__wrap
+        height: calc(100% - 52px)
+        // box-shadow: 3px 3px 95px rgba(117, 141, 139, 0.25)
+        box-shadow: 20px 3px 50px -35px rgba(117, 141, 139, 0.25)
+        z-index: 10
+        background: #FFFFFF
+        border-radius: 0 10px 10px 10px
+        padding-top: 40px
+        padding-left: 28px
+        padding-bottom: 44px
+        padding-right: 28px
+  &-table
+    &__btn
+      display: block
+      border: 1px solid #6CB7B2
+      box-sizing: border-box
+      border-radius: 30px
+      width: 70px
+      height: 20px
+      font-family: FuturaPTMedium
+      text-align: center
+      font-size: 14px
+      color: #2C3942
+      background: #ffffff
+      padding-bottom: 3px
+      transition: 0.3s
+      &:hover 
+        box-shadow: 2px 3px 20px rgba(107, 183, 178, 0.6)
+    &-tooltip
+      font-family: FuturaPTMedium
+      font-size: 12px
+      line-height: 120%
+      color: #2C3942
+      position: absolute
+      width: 121px
+      height: 36px
+      left: -135px
+      top: -10px
+      background: #FFFFFF
+      border-radius: 5px
+      text-align: center
+      line-height: 36px
+      z-index: -9
+      box-shadow: 5px 5px 20px rgba(117, 141, 139, 0.5)
+      transition: 0.3s
+      opacity: 0
+      &:after 
+        content: ""
+        position: absolute
+        border: 7px solid transparent
+        border-left: 7px solid #ffffff
+        right: -14px
+        top: 11px
+        
+
+    &_1
+      & .dataTables_wrapper
+        margin-top: 0 !important
+      & table
+        border-bottom: none !important
+        & thead th
+          vertical-align: top
+          text-align: left
+          white-space: nowrap
+          background-image: none !important
+          border-bottom: none !important
+          padding-bottom: 9px !important
+          padding-right: 10px !important
+          &:last-child
+            padding-right: 0 !important
+        & tbody 
+          & td 
+            transition: 0.3s
+          & tr
+            &:nth-child(odd)
+              & td 
+                background: #F6F7FB
+            &:hover 
+              & td 
+                background: #D2E9E8 !important
+    &_2
+      & tbody tr:nth-child(odd)
+        & td
+          background: #fff !important
+      & tbody tr:nth-child(even)
+        & td
+          background: #F6F7FB
+      & .dev-table-text_2
+        line-height: 20px
+    &-text
+      &_1
+        // font-family: FuturaPTMedium
+        font-size: 14px
+        line-height: 17px
+        color: #2C3942
+        opacity: 0.5
+        white-space: nowrap
+      &_2
+        font-family: FuturaPTMedium
+        font-size: 14px
+        line-height: 33px
+        color: #2C3942
+        white-space: nowrap
+      &_index
+        &_0
+          text-align: center
+          line-height: 21px
+          display: block
+          width: 33px
+          height: 20px
+          background: #D1D1D1
+          border-radius: 10px
+          position: relative
+          &:hover 
+            & .dev-table-tooltip
+              opacity: 1
+              z-index: 99999
+        &_min 
+          text-align: center
+          line-height: 21px
+          display: block
+          width: 39px
+          height: 20px
+          border-radius: 10px
+          background: #FFD1D1
+          position: relative
+          &:after 
+            padding-left: 3px
+            content: url('../images/arrow_red.png')
+          &:hover 
+            & .dev-table-tooltip
+              opacity: 1
+              z-index: 99999
+        &_max
+          text-align: center
+          line-height: 21px
+          display: block
+          width: 39px
+          height: 20px
+          border-radius: 10px
+          background: #AAE191
+          position: relative
+          &:after 
+            padding-left: 3px
+            content: url('../images/arrow_green.png')
+          &:hover 
+            & .dev-table-tooltip
+              opacity: 1
+              z-index: 99999
+
+  &-title
+    &__wrap
+      margin-bottom: 30px
+
+.dev-table_3
+  & thead th
+    background-position: 76% 8px!important
+  & thead .sorting
+    background-image: url(../images/arrow_down.png) !important
+  & thead .sorting_asc
+    background-image: url(../images/arrow_top.png) !important
+  & thead .sorting_desc
+    background-image: url(../images/arrow_down.png) !important
+  & thead th:first-child
+    background-size: 0px !important
+
+
+.count_house 
+  position: absolute
+  width: 45px
+  height: 66px
+  left: calc(50% - 22.5px)
+  top: calc(50% - 23px)
+  & span 
+    font-family: FuturaPTMedium
+    font-size: 48px
+    line-height: 50px
+    text-align: center
+    color: #2C3942
+  & .count-desc
+    font-family: FuturaPTMedium
+    line-height: 16px
+    font-size: 14px
+    color: #2C3942
+    opacity: 0.5
+
+.doughnut-tooltip
+  & span
+    background: #FFFFFF
+    box-shadow: 5px 5px 30px rgba(254, 172, 43, 0.4)
+    border-radius: 5px
+    padding: 15px 10px
+    font-family: FuturaPTDemi
+    font-size: 12px
+    line-height: 120%
+    color: #FEAC2B
+
+
