@@ -615,8 +615,41 @@ $(document).ready(function () {
     $(this).parent('div').find('.main-btn__sec').removeClass('main-btn__sec_active');
     $(this).addClass('main-btn__sec_active');
   });
-
-
+  
+  
+  $('input[type="checkbox"]').change(function() {
+    $(this).toggleClass('checked');
+    if($(this).hasClass('checked')){
+      $(this).parents('.lay-checkbox__wrap').find('label').addClass('checkedLabel');
+      $(this).attr('checked', true);
+    } else {
+      $(this).attr('checked', false);
+      $(this).parents('.lay-checkbox__wrap').find('label').removeClass('checkedLabel');
+      $(this).removeAttr('checked');
+    }
+  });
+  $('#check_4').change(function() {
+    if($(this).hasClass('checked')){
+    } else {
+      $(this).parents('.lay-stock').find('.lay-sort-col input').removeClass('checked');
+      $(this).parents('.lay-stock').find('.lay-sort-col input').attr('checked', false);
+      $(this).parents('.lay-stock').find('.lay-sort-col input').removeAttr('checked');
+      $(this).parents('.lay-stock').find('.lay-sort-col label').removeClass('checkedLabel');
+    }
+  });
+  
+  $('.allSort').click(function() {
+    $(this).parents('.lay-stock').find('.lay-sort-col input').addClass('checked');
+    $(this).parents('.lay-stock').find('.lay-sort-col input').attr('checked', true);
+    $(this).parents('.lay-stock').find('.lay-sort-col label').addClass('checkedLabel');
+  });
+  $('.clearSort').click(function() {
+    $(this).parents('.lay-stock').find('.lay-sort-col input').removeClass('checked');
+    $(this).parents('.lay-stock').find('.lay-sort-col input').attr('checked', false);
+    $(this).parents('.lay-stock').find('.lay-sort-col input').removeAttr('checked');
+    $(this).parents('.lay-stock').find('.lay-sort-col label').removeClass('checkedLabel');
+  });
+  
 });
 
 

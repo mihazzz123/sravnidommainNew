@@ -78,10 +78,6 @@
       position: absolute
       left: 99999px
       z-index: -999
-      &:checked
-        & + .lay-checkbox__label:before
-          background-image: url(../images/check.png)
-          border: 1px solid #6CB7B2
     &__label
       // font-family: FuturaPTMedium
       font-size: 14px
@@ -98,7 +94,19 @@
         margin-right: 13px
         background-position: 2px 3px
         background-repeat: no-repeat
+      &.checkedLabel:before
+        background-image: url(../images/check.png)
+        border: 1px solid #6CB7B2
   &-sort
+    &-link
+      display: block
+      font-size: 14px
+      line-height: 23px
+      color: #2C3942
+      // border-bottom: 1px solid #2C3942 
+      margin-right: 35px
+      cursor: pointer
+      text-decoration: underline
     &__wrap
       margin-left: -4px
       margin-right: -4px

@@ -5966,9 +5966,6 @@ input:-webkit-autofill {
   position: absolute;
   left: 99999px;
   z-index: -999; }
-  .lay-checkbox__input-hidden:checked + .lay-checkbox__label:before {
-    background-image: url(../images/check.png);
-    border: 1px solid #6CB7B2; }
 
 .lay-checkbox__label {
   font-size: 14px;
@@ -5986,6 +5983,18 @@ input:-webkit-autofill {
     margin-right: 13px;
     background-position: 2px 3px;
     background-repeat: no-repeat; }
+  .lay-checkbox__label.checkedLabel:before {
+    background-image: url(../images/check.png);
+    border: 1px solid #6CB7B2; }
+
+.lay-sort-link {
+  display: block;
+  font-size: 14px;
+  line-height: 23px;
+  color: #2C3942;
+  margin-right: 35px;
+  cursor: pointer;
+  text-decoration: underline; }
 
 .lay-sort__wrap {
   margin-left: -4px;
